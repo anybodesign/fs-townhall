@@ -1,0 +1,444 @@
+// Gutenberg Stuff
+// -
+// + + + + + + + + + + 
+
+
+// Colors
+
+.has-primary-background-color {
+	background-color: var(--primary_color);
+}
+.has-secondary-background-color {
+	background-color: var(--secondary_color);
+}
+.has-accent-background-color {
+	background-color: var(--accent_color);
+}
+.has-text-background-color {
+	background-color: var(--text_color);
+}
+.has-bg-background-color {
+	background-color: var(--bg_color);
+}
+.has-white-background-color {
+	background-color: #fff;
+}
+
+.has-inline-color.has-primary-color,
+.has-text-color.has-primary-color {
+	color: var(--primary_color);
+}
+.has-inline-color.has-secondary-color,
+.has-text-color.has-secondary-color {
+	color: var(--secondary_color);
+}
+.has-inline-color.has-accent-color,
+.has-text-color.has-accent-color {
+	color: var(--accent_color);
+}
+.has-inline-color.has-text-color,
+.has-text-color.has-text-color {
+	color: var(--text_color);
+}
+.has-inline-color.has-bg-color,
+.has-text-color.has-bg-color {
+	color: var(--bg_color);
+}
+.has-inline-color.has-white-color,
+.has-text-color.has-white-color {
+	color: #fff;
+}
+
+// Links / Button
+
+.wp-block-button {}
+	
+.wp-block-button__link,
+.wp-block-file__button {
+	@extend .action-btn;
+	border-radius: 0;
+}
+
+// Files
+
+.wp-block-file {
+	
+	a:first-child {
+		font-family: var(--font_regular);
+		text-decoration: none;
+		border-bottom: var(--secondary_color) 2px solid;
+		transition: border .2s ease-in-out;
+		
+		&:hover {
+			border-bottom-width: .4rem;
+		}
+		&:focus {
+			background-color: var(--text_color);
+			border-bottom-color: var(--text_color);
+			color: #fff;
+		}
+	}
+}
+
+
+// Text
+
+.has-small-font-size {
+	@extend .text-mentions;
+}
+.has-large-font-size {
+	@extend .text-intro;
+}
+
+
+// Columns 
+
+.wp-block-columns {
+	display: block;
+	
+	.wp-block-column {
+		width: 100% !important;
+		margin: 0;
+	}
+
+	@include rwd(medium) {
+		display: flex;
+
+		.wp-block-column {
+			margin: 0 $grid-padding;
+
+			&:first-child {
+				margin-left: 0;
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+		&.columns-2 {
+			.wp-block-column {
+				width: 50%;
+			}
+		}
+		&.columns-3 {
+			.wp-block-column {
+				width: 33.3333%;
+			}
+		}
+		&.columns-4 {
+			.wp-block-column {
+				width: 25%;
+			}
+		}
+	}
+}
+
+
+// Images
+
+.wp-block-image {
+	
+	& img {
+		max-width: none;
+	}
+	
+	&.alignfull {
+		width: 100%;
+	}	
+}
+
+
+// Quotes
+
+.wp-block-quote {
+	margin-bottom: $grid-padding*2 !important;
+	
+	cite {
+		
+	}
+}
+
+
+// Latest posts & Categories
+
+.wp-block-archives-list,
+.wp-block-categories-list,
+.wp-block-latest-posts__list {
+	
+	.page-content > & {
+		padding-left: $grid-padding;
+	}	
+	
+	li {
+		margin-left: 0;
+		border-bottom: var(--text_color) 1px solid;
+		
+		&:first-child {
+			border-top: var(--text_color) 1px solid;
+		}
+			
+		a {
+			padding: $grid-padding 0;
+			text-decoration: none;
+			transition: .2s ease-in-out;
+			
+			&:hover,
+			&:focus {
+				padding-left: $grid-padding;
+				padding-right: $grid-padding;
+				background-color: var(--primary_color);
+				color: #fff;
+			}
+		}
+	}
+	
+	&.is-grid {
+		li {
+			margin-bottom: 0;
+			
+			&:first-child {
+				border-top: 0;
+			}
+		}
+	}
+}
+.wp-block-latest-posts__list {
+	li {
+		a {
+			display: block;
+		}
+	}
+}
+
+.wp-block-archives-list,
+.wp-block-categories-list {
+	list-style: none;
+	
+	li {
+		a {
+			display: inline-block;
+		}
+	}
+}
+
+
+// Separators 
+
+hr {
+	height: 0; 
+	border: 0;
+	border-top: var(--text_color) 1px solid;
+	
+	.page-content > & {
+		width: calc(100% - #{$grid-padding*4});
+		margin: $grid-padding*5 auto;
+		
+		@include rwd(large) {
+			max-width: calc(#{$max-width} - #{$grid-padding*4});
+		}
+	}
+}
+
+.wp-block-separator {
+	@extend hr;
+}
+.wp-block-separator {
+	
+	.page-content > & {
+		max-width: 20rem;
+		
+		&.is-style-wide {
+			max-width: 80%;
+			
+			@include rwd(medium) {
+				max-width: 50rem;
+			}
+		}		
+	}
+	
+	&.has-primary-background-color {
+		border-top-color: var(--primary_color);
+	}
+	&.has-secondary-background-color {
+		border-top-color: var(--secondary_color);
+	}
+	&.has-accent-background-color {
+		border-top-color: var(--accent_color);
+	}
+	&.has-text-background-color {
+		border-top-color: var(--text_color);
+	}
+	&.has-bg-background-color {
+		border-top-color: var(--bg_color);
+	}
+	&.has-white-background-color {
+		border-top-color: white;
+	}
+}
+
+
+// Table
+
+.wp-block-table {
+
+}
+
+// Media text
+
+.wp-block-media-text {
+	
+	.wp-block-media-text__content {
+		padding: $grid-padding 0;
+		
+		@include rwd(smallmedium) {
+			padding: $grid-padding;
+			padding-right: 0;
+		}
+		@include rwd(large) {
+			padding: $grid-padding*2;
+		}
+	}
+	
+	&.has-media-on-the-right {
+		.wp-block-media-text__content {
+			@include rwd(smallmedium) {
+				padding: $grid-padding;
+				padding-left: 0;
+				padding-right: $grid-padding;
+			}
+			@include rwd(large) {
+				padding: $grid-padding*2;
+			}
+		}
+	}
+}
+
+// Gallery
+
+.wp-block-gallery {
+	.page-content > & {
+		padding-left: $grid-padding;
+	}
+	
+	.blocks-gallery-image,
+	.blocks-gallery-item { 
+		figcaption {
+			padding: $grid-padding;
+			background-color: var(--text_color);
+		}
+	}
+	
+}  
+
+
+// ACF Blocks Stuff
+// -
+// + + + + + + + + + + 
+
+
+[class*=acf-block--] {
+
+	.acf-block-container {
+		width: 100%;
+		
+		&.center-max {
+			padding: $grid-padding;
+			margin: 0 auto;
+			max-width: $max-width;
+		}
+	}
+}
+
+// Text 
+
+.acf-block--text {
+	.acf-block-container {
+		
+	}
+}
+
+
+// Text+Img
+
+.acf-block--textimg {
+	.acf-block-container {
+		
+	}
+}
+
+
+// Gallery 
+
+.acf-block--gallery {
+	.acf-block-container {
+		
+	}
+}
+
+
+// CTA
+
+.acf-block--cta {
+	.acf-block-container {
+		
+	}
+}
+
+
+// Posts
+
+.acf-block--posts {
+	.acf-block-container {
+		
+		.acf-block-post-item {
+			@extend .post-block;
+		}
+		.acf-block-post-figure {
+			@extend .post-figure;
+		}
+		.acf-block-post-title {
+			@extend .post-title;
+		}
+		.acf-block-post-metas {
+			@extend .post-meta;
+		}
+		.acf-block-post-excerpt {
+			@extend .post-excerpt;
+		}
+	}
+}
+
+
+// Testimonial
+
+.acf-block--testimonial {
+	.acf-block-container {
+		
+	}
+}
+
+
+// Lists Advanced
+
+.acf-block--advanced-list {
+	.acf-block-container {
+		
+	}
+}
+
+
+// Cards
+
+.acf-block--cards {	
+	.acf-block-container {
+		
+	}
+}
+
+
+// Banner
+
+.acf-block--pagebanner {
+	.acf-block-container {
+		
+	}	
+}

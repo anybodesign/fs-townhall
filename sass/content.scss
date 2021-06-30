@@ -1,0 +1,195 @@
+// Common Stuff
+// -
+// + + + + + + + + + + 
+
+
+// Structure 
+
+
+.page-wrap {
+	
+	&.has-sidebar {
+		@include center();
+		
+		@include rwd(large) {
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
+}
+
+.page-banner,
+.page-content,
+.page-sidebar {
+	width: 100%;
+}
+
+.page-banner {
+	margin-bottom: $grid-padding*2;
+	
+	.inner {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: $grid-padding*2 $grid-padding;
+		
+		.banner-has-bg & {
+			min-height: 15rem;
+			
+			@include rwd(medium) {
+				min-height: 20rem;
+			}
+		}
+	}
+	
+	.banner-has-bg & {
+		background-color: var(--bg_color);
+	}
+	
+	.page-title {
+		margin-bottom: 0;
+	}
+
+	.error404 &,
+	.page-template-pagecustom-maintenance & {
+		
+	}
+	
+}
+
+.page-title {
+	
+	.search-term {
+		font-family: var(--font_bolditalic);
+	}
+}
+
+.page-content {
+	
+	// Centering Blocks and content
+	
+	& > * {
+		width: 100%;
+		padding: 0 $grid-padding;
+		@include center();
+	}
+	
+	@include rwd(medium) {
+		& > p,
+		& > [class*="contact-form-7"],
+		& .acf-block-text--1col,
+		& #comments {
+			padding-right: 20rem;
+		}
+		
+		& > p.has-text-align-center {
+			padding-right: 10rem;
+			padding-left: 10rem;
+		}
+	}
+	
+	& > *.alignwide {
+		max-width: $max-width-large;
+	}
+	& > *.alignfull {
+		margin-left: 0;
+		margin-right: 0;
+		max-width: none;
+	}
+	
+	// Beaver container
+	& > *.fl-builder-content {
+		margin-left: 0;
+		margin-right: 0;
+		max-width: none;
+		padding: 0;
+	}
+	
+	& > [class*="wp-block-gallery"],
+	& > [class*="wp-block-cover-image"],
+	& > [class*="wp-block-quote"] {
+		@include center();
+		margin-bottom: $grid-padding*2;
+	}
+	& > [class*="wp-block-table"],
+	& > [class*="wp-block-verse"] {	
+		position: relative;
+		margin: $grid-padding*2 auto;
+		max-width: calc(#{$max-width} - #{$grid-padding}*2);
+	}
+	
+	& > span {
+		display: block;
+	    margin-bottom: 1.5em;
+	}
+	
+	@include rwd(large) {
+		
+		.has-sidebar & {
+			width: 75%;
+		}
+	}	
+}
+
+.page-sidebar {
+	padding: $grid-padding;
+
+	@include rwd(large) {
+		
+		.has-sidebar & {
+			width: 25%;
+		}
+	}	
+}
+
+
+// Scrollout Animations
+
+hr[data-scroll="in"] {
+	animation: stretch 1s ease-in-out;
+}
+section[data-scroll="in"],
+.wpcf7-form {
+	animation: slide_up 1s ease-in-out;
+}
+
+.boxed-cta[data-scroll="in"] {
+	
+	.acf-block-cta-text {
+		animation: move_left 1s ease-in-out;
+	}
+	.acf-block-cta-btn {
+		animation: move_right 1s ease-in-out;
+	}
+}
+
+.post-block[data-scroll="in"] {
+	
+	.post-figure,
+	.acf-block-post-figure {
+		animation: fade_in 1s ease-in-out;
+	}
+	.post-meta,
+	.acf-block-post-metas {
+		animation: border_opacity 1s ease-in-out;
+	}
+}
+
+@include rwd(medium) {
+	
+	.acf-block--textimg[data-scroll="in"] {
+		.acf-block-textimg-picture {
+			animation: slide_right 1s ease-in-out;
+		}
+		.right .acf-block-textimg-picture {
+			animation: slide_left 1s ease-in-out;
+		}
+		.acf-block-textimg-text {
+			animation: slide_left 1s ease-in-out;
+		}
+		.right .acf-block-textimg-picture {
+			animation: slide_right 1s ease-in-out;
+		}
+	}
+	
+}

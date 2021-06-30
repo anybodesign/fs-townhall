@@ -1,0 +1,282 @@
+/* ------------------------- */
+/* = Post blocks
+/* ------------------------- */
+
+.post-block {
+	position: relative;
+}
+.post-figure {
+	
+}
+.post-content {
+	
+}
+.post-title {
+	
+}
+.post-meta {
+	
+	p, span {
+		a {
+			@include link-style();
+		}
+	}
+}
+.post-excerpt {
+	
+}
+
+
+/* ------------------------- */
+/* = Archives
+/* ------------------------- */
+
+.the-posts {
+	display: flex;
+	flex-wrap: wrap;
+		
+	.page-content > & {
+		padding: 0;
+	}
+
+	.post-block {
+		width: calc(50% - #{$grid-padding}*2);
+		margin: $grid-padding;
+		
+		@include rwd(medium) {
+			width: calc(33.3333% - #{$grid-padding}*2);
+		}
+	}			
+}
+
+// Sidebar
+
+.widget-container {
+	margin-bottom: $grid-padding*4;
+}	
+.widget-title {
+	@extend h4;
+}
+
+/* ------------------------- */
+/* = Singles
+/* ------------------------- */
+
+.single-post {
+	
+}
+
+/* ------------------------- */
+/* = Pagination
+/* ------------------------- */
+
+// IAS 3
+
+.trigger {
+	padding-top: $grid-padding*3;
+	padding-bottom: $grid-padding*3;
+	
+	button {
+		margin: 0 auto;
+	}
+}
+.spinner {
+	text-align: center;
+	padding: $grid-padding*2 0;
+
+	svg {
+		display: inline-block;
+		width: 4.4rem;
+		height: 4.4rem;
+		
+		circle {
+			fill: var(--text_color);
+			
+			.white-text & {
+				fill: #fff;
+			}
+		}
+	}
+}
+.no-more {
+	display: none;
+	text-align: center;
+}
+
+
+// Pagenavi & Nav links
+
+.pagination {
+	padding: $grid-padding*2 0;
+}
+.nav-links,
+.wp-pagenavi {
+	display: flex;
+	flex-wrap: wrap;
+	
+	& > a,
+	& > span {
+		display: block;
+		width: 3.4rem;
+		height: 3.4rem;
+		margin: 0 $grid-padding $grid-padding 0;
+		
+		background-color: var(--text_color);
+		color: #fff;
+		border-radius: 50%;
+		
+		text-align: center;
+		line-height: 3.4rem;
+		
+		.white-text & {
+			background-color: #fff;
+			color: var(--text_color);
+		}
+	}
+	a {
+		text-decoration: none;
+		transition: background .2s ease-in-out;
+		
+		&:hover,
+		&:focus {
+			background-color: var(--primary_color);
+			color: #fff;
+		}
+	}
+	.current {
+		background-color: var(--primary_color);
+
+		.white-text & {
+			background-color: var(--primary_color);
+		}
+	}
+	
+	.pages {
+		@include a11y-hidden();
+	}
+	.previouspostslink,
+	.nextpostslink {
+		span {
+			@include a11y-hidden();
+		}
+	}
+	
+	a.last,
+	a.first,
+	a.next,
+	a.prev {
+		position: relative;
+		background-color: transparent;
+		color: var(--text_color);
+		padding: 0 $grid-padding;
+		border-radius: 0;
+		width: auto;
+		
+		&::after {
+			content: '';
+			display: block;
+			width: 25%;
+			height: 1px;
+			border-top: var(--text_color) 1px solid;
+			transition: .3s ease-in-out;
+		}
+		&:hover::after,
+		&:focus::after {
+			width: 100%;
+		}
+
+		.white-text & {
+			color: #fff;
+			
+			&::after {
+				border-top-color: #fff;
+			}
+		}
+	}
+}
+
+/* ------------------------- */
+/* = Comments
+/* ------------------------- */
+
+.comment-list {
+	list-style: none;
+	padding-left: 0;	
+	
+	.comment {
+		display: flex;
+		flex-direction: column;
+		margin: $grid-padding*4 0;
+		
+		@include rwd(medium) {
+			flex-direction: row;
+			flex-wrap: wrap;
+			align-items: flex-start;	
+		}
+		
+		.children {
+			
+		}
+	}
+	& > .comment {
+
+	}
+	
+	.comment-author.avatar {
+		width: 9.6rem;
+	}
+	
+	.comment-content {
+		
+		@include rwd(medium) {
+			flex: 1 0 0;
+			padding-left: $grid-padding*3;
+		}
+
+		a {
+			@include link-style();
+		}
+		.pending {
+			display: block;
+			margin: $grid-padding 0;
+			background-color: var(--secondary_color);
+			padding: $grid-padding;
+			color: #fff;
+		}		
+	}
+	.comment-author-name {
+		font-family: var(--font_bold);
+		font-size: 1.8rem;
+	}
+	.comment-date {
+		font-size: 1.4rem;
+		font-family: var(--font_mono);
+		margin-bottom: $grid-padding*2;
+	}
+	
+	.reply {
+		width: 100%;
+		margin-top: $grid-padding;
+		
+		@include rwd(medium) {
+			padding-left: calc(9.6rem + #{$grid-padding*3});
+		}
+		
+		a {
+			@include link-style();
+		}
+	}
+}
+.comment-reply-title {
+	
+	small {
+		display: block;
+		font-family: var(--font_regular);
+		font-size: 1.6rem;
+		a {
+			display: inline-block;
+			margin-top: $grid-padding;
+			@include link-style();
+		}
+	}
+}

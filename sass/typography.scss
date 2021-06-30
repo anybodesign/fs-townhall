@@ -1,0 +1,516 @@
+// ------------------------------
+//
+// = Typography & Markup Elements
+//
+// ------------------------------
+
+// Basics
+
+html {
+	font-size: 62.5%;
+}
+body {
+	font-family: var(--font_regular);
+	font-size: 1.8rem;
+	line-height: 1.5;
+	color: var(--text_color);
+	
+	@include rwd(large) {
+		font-size: 1.6rem;
+	}
+}
+
+// Focus visible
+
+.js-focus-visible :focus:not(:focus) {
+	outline: none;
+}
+.js-focus-visible :focus {
+	// Focus styles 
+}
+
+// Typography
+
+h1, h2, h3, h4, h5, h6,
+.h1-like, .h2-like, .h3-like, .h4-like, .h5-like, .h6-like {
+	color: var(--primary_color);
+	font-family: var(--font_title);
+	font-weight: normal;
+	line-height: 1.2;
+	margin: 1.25em 0;
+
+	&:first-child {
+		margin-top: 0;
+	}
+	
+	b, strong {
+		font-weight: normal;
+	}
+	i, em {
+		font-style: normal;
+	}
+
+	.white-text & {
+		color: #fff;
+	}
+		
+}
+
+h1, 
+.h1-like {
+    font-size: 3.6rem;
+	
+	@include rwd(large) {
+		font-size: 3.4rem;
+	}
+}
+h2, 
+.h2-like {
+	font-size: 3.2rem;
+	
+	@include rwd(large) {
+		font-size: 3rem;
+	}
+}
+h3, 
+.h3-like {
+    font-size: 2.8rem;
+	
+	@include rwd(large) {
+		font-size: 2.6rem;
+	}
+}
+h4, 
+.h4-like {
+    font-size: 2.2rem;
+	
+	@include rwd(large) {
+		font-size: 2rem;
+	}
+}
+h5, 
+.h5-like {
+    font-size: 2rem;
+	
+	@include rwd(large) {
+		font-size: 1.8rem;
+	}
+}
+h6, 
+.h6-like {
+    font-size: 1.8rem;
+	
+	@include rwd(large) {
+		font-size: 1.6rem;
+	}
+}
+
+p {
+    margin: 1.5em 0;
+}
+
+b, strong {
+	font-family: var(--font_bold);
+	font-weight: normal;
+}
+i, em {
+	font-family: var(--font_italic);
+	font-style: normal;
+}
+em strong, strong em,
+i strong, strong i,
+em b, b em,
+i b, b i {
+	font-family: var(--font_bolditalic);
+	font-weight: normal;
+	font-style: normal;
+}
+
+li p,
+li ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+::selection {
+	background-color: var(--accent_color);
+	//background-color: transparentize(#333, .9);
+	
+	.high-contrast & {
+		color: #fff;
+	}
+}
+
+// Custom Tinymce styles
+
+p.text-intro {
+	font-size: 2.2rem;
+	
+	@include rwd(large) {
+		font-size: 2rem;
+	}
+}
+p.text-mentions {
+	font-size: 1.4rem;
+	
+	@include rwd(large) {
+		font-size: 1.3rem;
+	}
+}
+
+// White text, inside a .white-text class container
+
+.has-text-background-color,
+.white-text {
+	
+	p, li, span, small, time, div,
+	h1, h2, h3, h4, h5, h6,
+	label, legend, address, figcaption {
+		color: #fff;
+	}
+	::selection {
+		color: var(--text_color);
+	}
+	
+}
+
+// Links
+
+a {
+	color: inherit;
+	background-color: transparent;
+}
+a:hover {
+	text-decoration: none;
+}
+
+.content-area {
+	
+	p {
+		a:not([class*="-btn"]) {
+			@include link-style();
+		}
+	}
+	.has-text-background-color p,
+	.white-text p {
+		a:not([class*="-btn"]) {
+			@include link-style(white);
+		}
+	}
+	
+}
+
+
+
+// Max values
+
+img, td,
+blockquote, code, pre,
+textarea, input, video {
+	max-width: 100%;
+}
+
+
+// Lists
+
+ul, ol {
+	padding-left: $grid-padding*2;
+	
+	.page-content > & {
+		padding-left: $grid-padding*3;
+	}
+}
+
+ul {
+	list-style-type: disc;
+}
+ol {
+	list-style-type: decimal;
+}
+
+nav ul, 
+nav ol {
+	padding: 0; 
+	margin: 0; 
+	list-style-type: none;
+}
+
+li ul, 
+li ol {
+	margin-top: 0; 
+	margin-bottom: 0;
+}
+
+
+// Images
+
+img {
+	height: auto;
+	border: 0;
+	border-style: none;
+	
+	.high-contrast & {
+		filter: grayscale(100) contrast(1.5);
+	}
+}
+
+figure {
+	position: relative;
+	//max-width: 100%;
+	margin: 0 0 $grid-padding 0;
+	overflow: hidden;
+	
+	img {
+		display: block;
+	}
+	
+	// WP block fix
+	
+	&:not([class*="is-resized"]) img {
+		width: 100%; 
+		height: auto;
+	}
+
+	
+	// Youtube links
+	
+	a[href*="youtube.com"] {
+		display: block;
+		position: relative;
+		
+		&::before,
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 50%; 
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+			z-index: 10;
+		}
+		&::before {
+			width: 8rem;
+			height: 8rem;
+			border-radius: 8rem;
+			background-color: transparentize( #333, .1 );
+			transition: .4s ease-in-out;
+		}
+		&::after {
+			width: 0; height: 0;
+			border-color: transparent;
+			border-left-color: #fff; 
+			border-width: 1.2rem;
+			border-style: solid;
+			left: calc(50% + .6rem);
+			transform: scaleX(1.4) translateX(-15%) translateY(-40%);
+		}
+		
+		&:focus::before, 
+		&:hover::before {
+			transform: translateX(-50%) translateY(-50%) scale(1.2);
+			background-color: var(--primary_color);
+		}
+		& img {
+			transition: opacity .2s ease-in-out;
+		}
+		&:focus img, 
+		&:hover img {
+			opacity: .7;
+		}
+		&:focus {
+			outline: none;
+		}
+		
+	}
+	
+}
+
+figcaption {
+	font-size: 1.3rem; 
+	line-height: 1;
+	margin: $grid-padding 0;
+}
+
+
+// Quotes
+
+q,
+blockquote {
+	&::before {
+		content: '';
+		display: block;
+		width: .3rem;
+		height: 100%;
+		border-left: var(--accent_color) 3px solid;
+		position: absolute;
+		top: 0;
+		left: $grid-padding;
+	}
+	
+	.page-content > & {
+		padding: $grid-padding*2 $grid-padding*4;
+		
+		@include rwd(large) {
+			padding-right: 8.3333%;
+		}
+	}
+}
+q,
+blockquote,
+blockquote p {
+	font-family: var(--font_regular);
+	font-style: normal;
+	font-size: 2.8rem;
+}
+blockquote p {
+	margin-bottom: 0;
+}
+cite {
+	display: block;
+	font-family: var(--font_regular);
+	font-style: normal;
+	margin-top: $grid-padding;
+	font-size: 85%;
+}
+
+
+// Misc
+
+iframe {
+	width: 100%;
+}
+
+small {
+	font-size: 75%;
+}
+
+sub, sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sub {
+	bottom: -0.25em;
+}
+sup {
+	top: -0.5em;
+}
+
+// Tables (responsive)
+
+
+.table-container {  // Wrap the <table> inside this container
+	width: 100%; 
+	overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    margin-bottom: $grid-padding*2;
+}
+thead {
+	background-color: var(--primary_color);
+}
+th {
+	color: #fff;
+	font-weight: normal;
+	font-family: var(--font_bold);
+}
+td, th {
+	vertical-align: middle;
+	margin-bottom: 0;
+	padding: $grid-padding;
+	border: var(--primary_color) 1px solid;
+	
+	thead + tbody &, 
+	tfoot & {
+		border-top: 0;
+	}
+	thead & {
+		border-top: var(--primary_color) 1px solid;
+	}
+
+}
+
+
+// Code
+
+code, pre, samp, kbd {
+	white-space: pre-line; // IE fix
+	white-space: pre-wrap;
+	font-family: var(--font_mono);
+	font-size: 1.6rem;
+}
+
+kbd {
+	padding: 0 2px;
+	border: 1px solid var(--text_color);
+	border-radius : 2px;
+}
+
+code, pre {
+	background-color: #eee;
+	color: var(--text_color);
+}
+code {
+	padding: .5em;
+	
+	pre & {
+		background-color: transparent;
+	}
+}
+pre {
+	border: var(--text_color) 1px dashed;
+	white-space: pre-line;
+	
+	.page-content > & {
+		padding: $grid-padding;
+		width: calc(100% - #{$grid-padding}*2);
+	}
+}
+mark {
+	padding: $grid-padding;
+	background: rgba(255, 255, 0, .9); // Transparent yellow
+}
+
+
+// WP Alignments
+
+
+.alignleft,
+.alignright {
+	display: inline; 
+}
+.alignleft {
+	float: left;
+	margin-right: $grid-padding*2;
+}
+.alignright {
+	float: right;
+	margin-left: $grid-padding*2;
+}
+.aligncenter {
+	display: block; 
+	clear: both; 
+	margin: 0 auto;
+}
+
+
+/* ------------------------------
+//
+//  Print
+// 
+// ------------------------------ */
+
+
+@media print {
+	
+	// @fix: FF print issue
+	
+	[class*="col-"] { 
+		display: block; 
+		float: left;
+	}   
+
+}	
