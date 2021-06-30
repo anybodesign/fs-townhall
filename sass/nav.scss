@@ -425,6 +425,11 @@
 		top: -1rem;
 		left: 4.4rem;
 		font-family: var(--font_regular);
+		
+		@include rwd(medium) {
+			left: -1rem;
+			transform: translateX(-100%);
+		}
 	}
 
 	& > span,

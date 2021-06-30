@@ -26,9 +26,10 @@
 				content: none;
 			}
 		}
-		
-		@include rwd(large) {
+		@include rwd(medium) {
 			flex-direction: row;
+		}
+		@include rwd(large) {
 			
 			.layout-v2 & {
 				flex-direction: column;
@@ -49,13 +50,13 @@
 
 	&.has-search {
 		display: flex;
-		flex-direction: column-reverse;
+		flex-direction: column;
 		align-items: flex-end; 
 			
 		@include rwd(small) {
 			flex-direction: row;
 			align-items: center;
-			justify-content: space-between;
+			justify-content: flex-end;
 		}
 	}	
 }
@@ -68,13 +69,18 @@
 .site-brand {
 	padding: $grid-padding;
 	margin-top: $grid-padding*2;
+	width: 60%;
 	
 	.site-toolbar + & {
 		margin-top: 0;
 	}
 	
 	@include rwd(large) {
-	
+		width: 75%;
+	}
+	@include rwd(large) {
+		width: auto;
+		
 		.layout-v2 & {
 			text-align: center;
 		}	
@@ -101,15 +107,16 @@
 		label {
 			position: absolute;
 			top: 1.25rem;
-			right: 3rem;
+			right: 4rem;
 			padding-left: 2.5rem;
 			font-family: var(--font-regular);
 			font-size: 1.3rem;
 			transition: .2s ease-in-out;
 			opacity: 0;
+			visibility: hidden;
 			border: 0;
 		}
-		&:hover label {
+		&:hover + label {
 			opacity: 1;
 		}
 		input[type="search"] {
@@ -117,28 +124,31 @@
 			border-color: transparent;
 			background-color: transparent;
 			transition: .3s ease-in-out;
-			width: 5rem;
+			width: 2rem;
 			
+			&:hover,
 			&:focus {
 				border-color: var(--primary-color);
 				background-color: transparent;
 				color: var(--text-color);
 				width: 20rem;
 			}
+			&:hover + label {
+				opacity: 1;
+				visibility: visible;
+			}
 			&:focus + label,
 			&:not(:placeholder-shown) + label {
 				opacity: 0;
 				visibility: none;
 			}
+			&:hover + label + #searchsubmit {
+				transform: translateX(-1rem);
+			}
 			&:focus + label + #searchsubmit,
 			&:not(:placeholder-shown) + label + #searchsubmit {
 				transform: translateX(-1rem);
 				pointer-events: initial;
-
-				&:hover,
-				&.focus-visible {
-					transform: translateX(-1rem) scale(1.2);
-				}				
 			}	
 		}
 		::placeholder {
@@ -159,6 +169,11 @@
 			right: 0;
 
 			@include a11y-hide();
+			
+			&:hover,
+			&:focus {
+				transform: translateX(-1rem) scale(1.2);
+			}
 		}
 	}	
 }
