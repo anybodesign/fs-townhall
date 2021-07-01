@@ -47,3 +47,42 @@
 		color: var(--btn_text_hover);
 	}	
 }
+
+// Next buttons
+
+.next-btn {
+	@extend .action-btn;
+	position: relative;
+	padding-right: $grid-padding*4;
+	
+	&::after {
+		content: '';
+		display: block;
+		width: 2rem;
+		height: 2rem;
+		background: url(img/ui/arrow.svg) 0 0 no-repeat;
+		background-size: contain;
+		position: absolute;
+		top: $grid-padding;
+		right: $grid-padding;	
+	}
+	
+	&:focus, 
+	&:hover {
+		&::after {
+			background-image: url(img/ui/arrow-white.svg);
+		}
+	}
+}
+
+.next-white-btn {
+	@extend .next-btn;
+	background-color: #fff;
+	color: var(--text_color);
+
+	&:focus, 
+	&:hover {
+		background-color: var(--text_color);
+		color: var(--btn_text_hover);
+	}
+}
