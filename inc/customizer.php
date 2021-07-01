@@ -99,6 +99,16 @@ function fs_customize_register($fs_customize) {
 			'priority'		=> 60,
 		)
 	);
+	
+	if ( class_exists('FS_CPT_AGENDA') ) {
+		$fs_customize->add_section(
+			'fs_agenda_section', 
+			array(
+				'title' 		=> __('Events options', 'fs-townhall'),
+				'priority'		=> 50,
+			)
+		);
+	}
 
 
 	// Colors
@@ -826,6 +836,25 @@ function fs_customize_register($fs_customize) {
 				),
 			)
 		);
+	
+	
+	// Agenda
+	// -
+	// + + + + + + + + + + 
+		
+		// Banner text
+		
+		$fs_customize->add_setting('agenda_excerpt', array(
+			//'transport'			=> 'postMessage',
+			'sanitize_callback'	=> 'sanitize_text_field',		
+		));
+		$fs_customize->add_control('agenda_excerpt', array(
+			'type'			=> 'textarea',
+			'label'			=> __('Events introduction text', 'fs-blog'),
+			'section'		=> 'fs_agenda_section',
+			'settings'		=> 'agenda_excerpt',
+		));	
+
 
 	// Theme Pictures
 	// -

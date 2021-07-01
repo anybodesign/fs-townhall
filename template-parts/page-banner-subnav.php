@@ -26,7 +26,14 @@
 					<?php }
 					
 					else {
-						the_excerpt();	
+						echo fs_page_excerpt();						
 					}				
+			}
+			
+			// Agenda excerpt
+			
+			$agenda = get_theme_mod('agenda_excerpt','');
+			if ( $agenda && is_post_type_archive( 'event' ) ) {
+				echo esc_html($agenda);
 			} 
 		?>
