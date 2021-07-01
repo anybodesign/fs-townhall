@@ -30,6 +30,13 @@
 					}				
 			}
 			
+			// Blog excerpt
+			
+			$blog = get_theme_mod('blog_excerpt','');
+			if ( $blog && is_home() ) {
+				echo esc_html($blog);
+			} 
+			
 			// Agenda excerpt
 			
 			$agenda = get_theme_mod('agenda_excerpt','');

@@ -88,7 +88,7 @@ function fs_customize_register($fs_customize) {
 		array(
 			'title' 		=> __('Theme Pictures', 'fs-townhall'),
 			'description' 	=> __('Select default banner pictures.', 'fs-townhall'),
-			'priority'		=> 50,
+			'priority'		=> 60,
 		)
 	);
 	$fs_customize->add_section(
@@ -655,6 +655,19 @@ function fs_customize_register($fs_customize) {
 	// -
 	// + + + + + + + + + + 		
 		
+		// Banner text
+		
+		$fs_customize->add_setting('blog_excerpt', array(
+			//'transport'			=> 'postMessage',
+			'sanitize_callback'	=> 'sanitize_text_field',		
+		));
+		$fs_customize->add_control('blog_excerpt', array(
+			'type'			=> 'textarea',
+			'label'			=> __('Blog introduction text', 'fs-townhall'),
+			'section'		=> 'fs_blog_section',
+			'settings'		=> 'blog_excerpt',
+		));
+		
 		// Sidebars
 		
 		$fs_customize->add_setting(
@@ -850,7 +863,7 @@ function fs_customize_register($fs_customize) {
 		));
 		$fs_customize->add_control('agenda_excerpt', array(
 			'type'			=> 'textarea',
-			'label'			=> __('Events introduction text', 'fs-blog'),
+			'label'			=> __('Events introduction text', 'fs-townhall'),
 			'section'		=> 'fs_agenda_section',
 			'settings'		=> 'agenda_excerpt',
 		));	
