@@ -46,7 +46,6 @@
 	position: relative;
 	width: 100%;
 	padding: $grid-padding;
-	margin-bottom: $grid-padding*2;
 
 	&.has-search {
 		display: flex;
@@ -234,8 +233,19 @@
 			left: 0;
 			
 			animation: drop-in .8s;
-			z-index: 100;		
+			z-index: 100;
 			
+			& > .row {
+				padding-bottom: 0;
+			} 		
+			
+		}
+		
+		.site-toolbar {
+			display: none;
+		}
+		.site-title .logo {
+			height: 3rem;
 		}
 		
 		&.admin-bar {
