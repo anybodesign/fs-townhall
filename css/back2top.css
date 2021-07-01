@@ -4,7 +4,7 @@
 	width: 60px;
 	height: 60px;
 	border-radius: 50%;
-	background-color: #000;
+	background-color: var(--primary_color);
 	
 	position: fixed;
 	bottom: 1.5rem;
