@@ -34,6 +34,8 @@
 	.banner-has-bg & {
 		min-height: 20rem;
 		background-color: var(--bg_color);
+		background-size: cover;
+		background-position: center center;
 		
 		@include rwd(medium) {
 			min-height: 29rem;
