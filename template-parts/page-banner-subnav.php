@@ -23,6 +23,10 @@
 							<?php echo $children; ?>
 						</ul>
 					</nav>
-					<?php }				
+					<?php }
+					
+					else {
+						the_excerpt();	
+					}				
 			} 
 		?>
