@@ -512,6 +512,24 @@
 	}
 }
 
+// Breadcrumbs 
+
+.breadcrumbs-nav {
+	position: relative;
+	padding: $grid-padding;
+	
+	span {
+		font-size: 1.4rem;
+		
+		a {
+			@include link-style();
+		}
+	}
+	.current-item {
+		font-family: var(--font_italic);
+	}
+}
+
 // Widget nav menus
 
 .widget-container {
