@@ -13,7 +13,7 @@
 ?>
 					<div class="page-banner"<?php if ( $has_bg ) { fs_bg_img(); } ?>>
 						<div class="inner">
-						
+							
 							<h1 class="page-title">
 							<?php 	
 								if ( is_home() && ! is_front_page() ) {
@@ -31,17 +31,8 @@
 							</h1>
 							
 							<?php 
-								if ( is_page_template( 'pagecustom-maintenance.php' ) ) {
-									the_content(); 
-								} 
-								if ( is_archive() ) {
-									the_archive_description( '<div class="archive-desc">', '</div>' );
-								}
-								if ( is_single() ) {
-									while ( have_posts() ) : the_post();
-									get_template_part('template-parts/post', 'meta');
-									endwhile;							
-								} 
+								get_template_part( 'template-parts/page-banner', 'subnav' ); 
+								get_template_part( 'template-parts/page-banner', 'desc' ); 
 							?>
 						</div>
 					</div>
