@@ -932,6 +932,29 @@ function fs_customize_register($fs_customize) {
 			)
 		);
 		
+		// Agenda Image
+		
+		if ( class_exists('FS_CPT_AGENDA') ) {
+			$fs_customize->add_setting(
+				'bg_agenda', 
+				array(
+					'sanitize_callback'	=> 'esc_url_raw'
+				)
+			);
+			$fs_customize->add_control( 
+				new WP_Customize_Image_control(
+					$fs_customize, 
+					'bg_agenda', 
+					array(
+						'label'			=> __('Events', 'fs-townhall'),
+						'description'	=> __('Choose a picture for the events banner. (2048 x 625 pixels max.)', 'fs-townhall'),
+						'section'		=> 'fs_pictures_section',
+						'settings'		=> 'bg_agenda',
+					)
+				)
+			);
+		}
+		
 		// 404 Image
 		
 		$fs_customize->add_setting(

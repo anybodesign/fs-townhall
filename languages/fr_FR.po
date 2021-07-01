@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: FS Townhall\n"
-"POT-Creation-Date: 2021-07-01 14:56+0200\n"
-"PO-Revision-Date: 2021-07-01 14:57+0200\n"
+"POT-Creation-Date: 2021-07-01 17:34+0200\n"
+"PO-Revision-Date: 2021-07-01 17:34+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -470,11 +470,20 @@ msgid "Choose a picture for the blog banner. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une photo pour la bannière du blog. (2048 x 625 pixels max.)"
 
-#: inc/customizer.php:948
+#: inc/customizer.php:949
+msgid "Events"
+msgstr "Agenda"
+
+#: inc/customizer.php:950
+msgid "Choose a picture for the events banner. (2048 x 625 pixels max.)"
+msgstr ""
+"Choisissez une image pour la bannière de l’agenda. (2048 x 625 pixels max.)"
+
+#: inc/customizer.php:971
 msgid "404 error"
 msgstr "Erreur 404"
 
-#: inc/customizer.php:949
+#: inc/customizer.php:972
 msgid "Choose a picture for the 404 error page. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une image pour la page d’erreur 404. (2048 x 625 pixels max.)"

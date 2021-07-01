@@ -619,6 +619,7 @@ function fs_bg_img() {
 	
 	$default = get_theme_mod('bg_default');
 	$blog = get_theme_mod('bg_blog');
+	$agenda = get_theme_mod('bg_agenda');
 	$error = get_theme_mod('bg_404');
 	
 	if ( is_404() && $error ) {
@@ -626,6 +627,9 @@ function fs_bg_img() {
 	
 	} else if ( ( is_home() || is_category() ) && $blog ) {
 		$bg = ' data-bg="has-bg" style="background-image: url('.$blog.')"';
+	
+	} else if ( ( is_post_type_archive('event') || is_tax('event-type') ) && $agenda ) {
+		$bg = ' data-bg="has-bg" style="background-image: url('.$agenda.')"';
 		
 	} else if ( '' != get_the_post_thumbnail() ) {
 		$img_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large-hd' );
