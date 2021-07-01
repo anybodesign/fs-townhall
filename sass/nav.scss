@@ -101,9 +101,12 @@
 	& > li {
 		position: relative;
 		display: block;
+		font-family: var(--font_title);
+		font-size: 2rem;
 		
 		@include rwd(large) {
 			margin-left: $grid-padding;
+			font-size: 1.8rem;
 		}
 		@include rwd(wide) {
 			margin-left: $grid-padding*2;

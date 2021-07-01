@@ -471,7 +471,7 @@ add_action( 'init', 'fs_custom_nav_menus' );
 function fs_nav_classes( $classes, $item ) {
     
 	// Remove active state on page for posts
-    if( ( is_post_type_archive() || is_tax() || is_404() || is_search() || is_singular('project') ) && $item->title == 'Blog' ) {
+    if( ( is_post_type_archive() || is_tax() || is_404() || is_search() || is_singular('event') ) && $item->title == 'Actualités' ) {
         $classes = array_diff( $classes, array( 'current_page_parent' ) );
     }
     return $classes;
