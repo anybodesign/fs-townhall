@@ -48,7 +48,7 @@
 		);
 		background-size: 20% 1rem;
 	}
-	&:focus {
+	&:focus-visible {
 		background-color: var(--text_color);
 		color: #fff;
 		background-image: none;
@@ -56,8 +56,20 @@
 	&:active {
 		color: var(--secondary_color);
 	}
-	&:focus:visited {
+	&:focus-visible:visited {
 		color: #fff;
+	}
+	
+	@include focus() {
+		&:focus {
+			background-color: var(--text_color);
+			color: #fff;
+			background-image: none;
+			outline: none;
+		}
+		&:focus:visited {
+			color: #fff;
+		}
 	}	
 }
 
@@ -191,4 +203,13 @@
 			@content;
 		}
 	}
+}
+
+// Focus visible fallback
+
+@mixin focus() {
+
+	@supports not selector(:focus-visible) {
+		@content
+	}	
 }
