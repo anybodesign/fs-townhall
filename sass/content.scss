@@ -25,29 +25,47 @@
 }
 
 .page-banner {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	justify-content: flex-start;
 	margin-bottom: $grid-padding*2;
-	
-	.inner {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		padding: $grid-padding*2 $grid-padding;
+
+	.banner-has-bg & {
+		min-height: 20rem;
+		background-color: var(--bg_color);
 		
-		.banner-has-bg & {
-			min-height: 15rem;
-			
-			@include rwd(medium) {
-				min-height: 20rem;
-			}
+		@include rwd(medium) {
+			min-height: 29rem;
+		}
+	}
+		
+	.inner {
+		margin: 0;
+		left: 0;
+		max-width: 50rem;
+		padding: $grid-padding*2;
+		background-color: var(--page_color);
+		
+		@include rwd(large) {
+			left: $half-space;
+			transform: translateX(-$grid-padding*2);
+		}
+		
+		&::after {
+			content: '';
+			display: block;
+			width: calc(100% - #{$grid-padding}*4 );
+			height: 1px;
+			position: absolute;
+			bottom: 0;
+			left: $grid-padding*2;
+			@include dotted-line();
 		}
 	}
 	
-	.banner-has-bg & {
-		background-color: var(--bg_color);
-	}
-	
-	.page-title {
-		margin-bottom: 0;
+	.page-title, p {
+		margin: 0 0 $grid-padding/2 0;
 	}
 
 	.error404 &,
@@ -56,6 +74,7 @@
 	}
 	
 }
+
 
 .page-title {
 	

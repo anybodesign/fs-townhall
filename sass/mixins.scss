@@ -2,6 +2,14 @@
 // = Mixins
 // -------------------------
 
+// dotted line
+
+@mixin dotted-line($color1: var(--text_color), $color2: transparent, $space: 4) {
+    background-image: linear-gradient(to right, $color1 0%, $color1 (100% / $space), $color2 (100% / $space));
+    background-position: 0 bottom; 
+    background-size: ($space + px) 1px;
+    background-repeat: repeat-x;
+}
 
 // Link Style
 
