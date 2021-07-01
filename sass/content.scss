@@ -41,6 +41,9 @@
 			min-height: 29rem;
 		}
 	}
+	.error404 & {
+		min-height: 50vh;
+	}
 		
 	.inner {
 		margin: 0;

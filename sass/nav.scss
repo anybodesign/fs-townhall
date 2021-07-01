@@ -107,9 +107,17 @@
 		@include rwd(large) {
 			margin-left: $grid-padding;
 			font-size: 1.8rem;
+			
+			.layout-v2 & {
+				margin: 0 $grid-padding/2;
+			}
 		}
 		@include rwd(wide) {
 			margin-left: $grid-padding*2;
+			
+			.layout-v2 & {
+				margin: 0 $grid-padding;
+			}
 		}
 		
 		& > a {
