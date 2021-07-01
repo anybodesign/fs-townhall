@@ -533,6 +533,29 @@
 	}
 }
 
+// Subpages
+
+.sub-pages {}
+
+.subpages-list {
+	display: flex;
+	flex-wrap: wrap;
+	
+	& > li {
+		margin-right: $grid-padding*1.5;
+		
+		a {
+			@include link-style();	
+		}
+		
+		&.current_page_item a {
+			font-family: var(--font_bold);
+			background-size: 20% 1.2rem;
+		}
+		
+	}
+}
+
 // Widget nav menus
 
 .widget-container {

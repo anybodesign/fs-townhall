@@ -33,7 +33,7 @@ body {
 
 h1, h2, h3, h4, h5, h6,
 .h1-like, .h2-like, .h3-like, .h4-like, .h5-like, .h6-like {
-	color: var(--primary_color);
+	color: var(--text_color);
 	font-family: var(--font_title);
 	font-weight: normal;
 	line-height: 1.2;
@@ -61,47 +61,47 @@ h1,
     font-size: 3.6rem;
 	
 	@include rwd(large) {
-		font-size: 3.4rem;
+		font-size: 3.8rem;
 	}
 }
 h2, 
 .h2-like {
-	font-size: 3.2rem;
+	font-size: 3rem;
 	
 	@include rwd(large) {
-		font-size: 3rem;
+		font-size: 3.2rem;
 	}
 }
 h3, 
 .h3-like {
-    font-size: 2.8rem;
+    font-size: 2.6rem;
 	
 	@include rwd(large) {
-		font-size: 2.6rem;
+		font-size: 2.8rem;
 	}
 }
 h4, 
 .h4-like {
-    font-size: 2.2rem;
+    font-size: 2rem;
+	
+	@include rwd(large) {
+		font-size: 2.2rem;
+	}
+}
+h5, 
+.h5-like {
+    font-size: 1.8rem;
 	
 	@include rwd(large) {
 		font-size: 2rem;
 	}
 }
-h5, 
-.h5-like {
-    font-size: 2rem;
+h6, 
+.h6-like {
+    font-size: 1.6rem;
 	
 	@include rwd(large) {
 		font-size: 1.8rem;
-	}
-}
-h6, 
-.h6-like {
-    font-size: 1.8rem;
-	
-	@include rwd(large) {
-		font-size: 1.6rem;
 	}
 }
 

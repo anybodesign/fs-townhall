@@ -43,7 +43,7 @@
 	.inner {
 		margin: 0;
 		left: 0;
-		max-width: 50rem;
+		max-width: 52rem;
 		padding: $grid-padding*2;
 		background-color: var(--page_color);
 		
@@ -64,7 +64,10 @@
 		}
 	}
 	
-	.page-title, p {
+	.page-title {
+		margin: 0 0 $grid-padding 0;
+	}
+	p {
 		margin: 0 0 $grid-padding/2 0;
 	}
 
