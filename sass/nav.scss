@@ -516,7 +516,10 @@
 
 .breadcrumbs-nav {
 	position: relative;
-	padding: $grid-padding;
+	
+	.inner {
+		padding: $grid-padding;
+	}
 	
 	span {
 		font-size: 1.4rem;

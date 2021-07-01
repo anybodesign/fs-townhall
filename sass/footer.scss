@@ -45,10 +45,13 @@
 .footer-copyright {
 	padding: $grid-padding*1.5 $grid-padding;
 	width: 100%;
-	border-top: var(--text_color) 1px dotted;
+	//border-top: var(--text_color) 1px dotted;
+	@include dotted-line();
+	background-position: 0 top;
 	
 	.white-text & {
-		border-top-color: #fff;	
+		@include dotted-line(#fff, transparent, 4);
+		background-position: 0 top;	
 	}
 	
 	@include rwd(medium) {
