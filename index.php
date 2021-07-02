@@ -32,7 +32,11 @@ get_header(); ?>
 						<div id="posts_list" class="the-posts" >
 							<?php 
 								while ( have_posts() ) : the_post();
-									get_template_part( 'template-parts/post', 'block' ); 
+									if (is_post_type_archive('event') || is_tax('event_type') || is_tax('event_period') ) {
+										get_template_part( 'template-parts/event', 'block' );
+									} else {
+										get_template_part( 'template-parts/post', 'block' );
+									}
 								endwhile;
 							?>
 						</div>
