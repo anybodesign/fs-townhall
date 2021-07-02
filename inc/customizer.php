@@ -867,6 +867,25 @@ function fs_customize_register($fs_customize) {
 			'section'		=> 'fs_agenda_section',
 			'settings'		=> 'agenda_excerpt',
 		));	
+		
+		// Tax filters
+		
+		$fs_customize->add_setting(
+			'tax_filters', 
+			array(
+				'default'			=> false,
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'tax_filters', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('Display the search filters.', 'fs-townhall'),
+				'section'		=> 'fs_agenda_section',
+				'settings'		=> 'tax_filters',
+			)
+		);
 
 
 	// Theme Pictures
