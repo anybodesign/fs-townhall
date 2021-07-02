@@ -37,25 +37,88 @@
 		
 	.page-content > & {
 		padding: 0;
+		
+		.has-sidebar & {
+			padding-right: 8.3333%;
+		}
 	}
 
 	.post-block {
-		width: calc(50% - #{$grid-padding}*2);
+		width: calc(100% - #{$grid-padding}*2);
 		margin: $grid-padding;
 		
+		@include rwd(small) {
+			width: calc(50% - #{$grid-padding}*2);
+		}
 		@include rwd(medium) {
 			width: calc(33.3333% - #{$grid-padding}*2);
+			
+			.has-sidebar & {
+				width: calc(50% - #{$grid-padding}*2);
+			}
 		}
 	}			
+}
+
+// Filters
+
+.page-filters {
+	position: relative;
+	margin-bottom: $grid-padding*2;
+	background-color: var(--bg_color);
+	
+	.page-content > & {
+		max-width: none;
+		padding: 0;
+	}
+	
+	.inner {
+		padding: $grid-padding*2 0;
+		
+		@include rwd(small) {
+			display: flex;
+			padding: $grid-padding*3 0;
+		}
+	}
+	
+	[class^="filter-"] {
+		padding: 0 $grid-padding;
+		
+		@include rwd(small) {
+			width: 50%;
+		}
+		@include rwd(medium) {
+			width: 33.3333%;
+		}
+		
+		label {
+			@include a11y-hidden();
+		}
+		input,
+		[class*="formfield"] {
+			margin: 0;
+		}
+	}
 }
 
 // Sidebar
 
 .widget-container {
-	margin-bottom: $grid-padding*4;
+	margin-bottom: $grid-padding*3;
+	
+	.page-sidebar & {
+		padding-bottom: $grid-padding*3;
+		@include dotted-line();
+		
+		&:last-of-type {
+			background: none;
+		}	
+	}
+	
 }	
 .widget-title {
 	@extend h4;
+	margin-bottom: $grid-padding;
 }
 
 /* ------------------------- */
