@@ -452,6 +452,12 @@ add_action( 'wp_enqueue_scripts', 'fs_scripts_load' );
 require FS_THEME_DIR . '/inc/customizer.php';
 
 
+// Agenda 
+
+if ( class_exists('FS_CPT_AGENDA') ) {
+	require_once( FS_THEME_DIR . '/inc/acf/agenda-date-fields.php' );	
+}
+
 // Register Navigation Menus
 
 function fs_custom_nav_menus() {

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: FS Townhall\n"
-"POT-Creation-Date: 2021-07-02 09:55+0200\n"
-"PO-Revision-Date: 2021-07-02 09:55+0200\n"
+"POT-Creation-Date: 2021-07-02 12:15+0200\n"
+"PO-Revision-Date: 2021-07-02 12:15+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -48,7 +48,7 @@ msgstr "Réseaux sociaux"
 msgid "Powered by WordPress!"
 msgstr "Propulsé par WordPress !"
 
-#: footer.php:68 functions.php:462
+#: footer.php:68 functions.php:468
 msgid "Footer Menu"
 msgstr "Menu pied de page"
 
@@ -96,102 +96,114 @@ msgstr "Grande"
 msgid "L"
 msgstr "L"
 
-#: functions.php:460 template-parts/header-toolbar.php:8
+#: functions.php:466 template-parts/header-toolbar.php:8
 msgid "Toolbar Menu"
 msgstr "Menu barre d'outils"
 
-#: functions.php:461 template-parts/header-nav.php:6
+#: functions.php:467 template-parts/header-nav.php:6
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: functions.php:463
+#: functions.php:469
 msgid "Social Menu"
 msgstr "Menu réseaux sociaux"
 
-#: functions.php:558
+#: functions.php:564
 msgid "Read More"
 msgstr "Lire la suite"
 
-#: functions.php:604
+#: functions.php:610
 msgid "Thumbnail x2"
 msgstr "Miniature (x2)"
 
-#: functions.php:605
+#: functions.php:611
 msgid "Medium x2"
 msgstr "Moyenne (x2)"
 
-#: functions.php:606
+#: functions.php:612
 msgid "Large x2"
 msgstr "Grande x2"
 
-#: functions.php:607
+#: functions.php:613
 msgid "Screen Medium"
 msgstr "Écran moyen"
 
-#: functions.php:608
+#: functions.php:614
 msgid "Screen Full"
 msgstr "Plein écran"
 
-#: functions.php:609
+#: functions.php:615
 msgid "Video Medium"
 msgstr "Vidéo taille moyenne"
 
-#: functions.php:610
+#: functions.php:616
 msgid "Video Full"
 msgstr "Vidéo plein écran"
 
-#: functions.php:652
+#: functions.php:658
 msgid "Blog Widgets"
 msgstr "Widget du blog"
 
-#: functions.php:661
+#: functions.php:667
 msgid "Footer Widgets #1"
 msgstr "Widgets pied de page #1"
 
-#: functions.php:670
+#: functions.php:676
 msgid "Footer Widgets #2"
 msgstr "Widgets pied de page #2"
 
-#: functions.php:679
+#: functions.php:685
 msgid "Footer Widgets #3"
 msgstr "Widgets pied de page #3"
 
-#: functions.php:704
+#: functions.php:710
 msgid "Text intro"
 msgstr "Texte d’intro"
 
-#: functions.php:710
+#: functions.php:716
 msgid "Text mentions"
 msgstr "Mentions"
 
-#: functions.php:716
+#: functions.php:722
 msgid "Action button"
 msgstr "Bouton d’action"
 
-#: functions.php:736
+#: functions.php:742
 msgid "Search for:"
 msgstr "Rechercher :"
 
-#: functions.php:738 template-parts/header-toolbar.php:25
+#: functions.php:744 template-parts/header-toolbar.php:25
 msgid "Search"
 msgstr "Chercher"
 
-#: functions.php:770
+#: functions.php:776
 #, php-format
 msgid "%1$s at %2$s"
 msgstr "%1$s à %2$s"
 
-#: functions.php:776
+#: functions.php:782
 msgid "Your comment is awaiting moderation."
 msgstr "Votre commentaire est en attente de modération."
 
-#: functions.php:785
+#: functions.php:791
 msgid "Reply"
 msgstr "Répondre"
 
-#: functions.php:791
+#: functions.php:797
 msgid "Edit"
 msgstr "Modifier"
+
+#: inc/acf/agenda-date-fields.php:9
+msgid "Event date"
+msgstr "Date de l’événement"
+
+#: inc/acf/agenda-date-fields.php:13
+msgid "Event starting date"
+msgstr "Date de début de l’événement"
+
+#: inc/acf/agenda-date-fields.php:30
+msgid "Event ending date (optional)"
+msgstr "Date de fin de l’événement (facultatif)"
 
 #: inc/acf/social-icons-fields.php:9
 msgid "Social icons"
@@ -536,6 +548,14 @@ msgstr "Il n’y a aucun historique des mises à jour disponible."
 msgid "Unfold Sub-Menu"
 msgstr "Déplier le sous-menu"
 
+#: template-parts/event-meta.php:13 template-parts/post-meta.php:20
+msgid "Posted "
+msgstr "Publié "
+
+#: template-parts/event-meta.php:14 template-parts/post-meta.php:22
+msgid "on&nbsp;"
+msgstr "le&nbsp;"
+
 #: template-parts/header-brand.php:15
 msgid "Go to Home Page"
 msgstr "Aller à la page d'accueil"
@@ -643,14 +663,6 @@ msgstr "Période"
 #: template-parts/post-filters.php:70
 msgid "All periods"
 msgstr "Toutes les périodes"
-
-#: template-parts/post-meta.php:20
-msgid "Posted "
-msgstr "Publié "
-
-#: template-parts/post-meta.php:22
-msgid "on&nbsp;"
-msgstr "le&nbsp;"
 
 #: template-parts/post-meta.php:26
 msgid "by&nbsp;"
