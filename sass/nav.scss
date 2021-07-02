@@ -275,6 +275,7 @@
 
 	& > li {
 		font-size: 1.6rem;
+		font-family: var(--font_regular);
 		border-bottom: var(--text_color) 1px dotted;
 		
 		&:first-child {
@@ -524,6 +525,7 @@
 
 .breadcrumbs-nav {
 	position: relative;
+	margin-bottom: $grid-padding;
 	
 	.inner {
 		padding: $grid-padding;
@@ -584,16 +586,18 @@
 				.white-text & {
 					border-bottom-color: #fff;
 				}
+			}
+			
+			& a:hover,
+			& a:focus,
+			&.current-cat a,
+			&.current-menu-item a {
+				padding: $grid-padding .5rem;
+				background-color: var(--accent_color);
+				color: var(--text_color);
 				
-				&:hover,
-				&:focus {
-					padding-left: .5rem;
-					background-color: var(--accent_color);
-					color: var(--text_color);
-					
-					.high-contrast & {
-						color: #fff;
-					}
+				.high-contrast & {
+					color: #fff;
 				}
 			}
 			
