@@ -50,7 +50,7 @@
 								<div class="formfield-select--container">
 									<?php
 										$args = array(
-											'show_option_all' => __( 'All event types', 'fs-townhall' ),
+											'show_option_all' => __( 'Event type', 'fs-townhall' ),
 											'taxonomy' => 'event_type',
 											'id' => 'type',
 											'value_field' => 'slug',
@@ -67,7 +67,7 @@
 								<div class="formfield-select--container">
 									<?php
 										$periods = array(
-											'show_option_all' => __( 'All periods', 'fs-townhall' ),
+											'show_option_all' => __( 'Period', 'fs-townhall' ),
 											'taxonomy' => 'event_period',
 											'id' => 'period',
 											'value_field' => 'slug',
