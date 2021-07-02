@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: FS Townhall\n"
-"POT-Creation-Date: 2021-07-01 17:34+0200\n"
-"PO-Revision-Date: 2021-07-01 17:34+0200\n"
+"POT-Creation-Date: 2021-07-02 09:55+0200\n"
+"PO-Revision-Date: 2021-07-02 09:55+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -140,56 +140,56 @@ msgstr "Vidéo taille moyenne"
 msgid "Video Full"
 msgstr "Vidéo plein écran"
 
-#: functions.php:648
+#: functions.php:652
 msgid "Blog Widgets"
 msgstr "Widget du blog"
 
-#: functions.php:657
+#: functions.php:661
 msgid "Footer Widgets #1"
 msgstr "Widgets pied de page #1"
 
-#: functions.php:666
+#: functions.php:670
 msgid "Footer Widgets #2"
 msgstr "Widgets pied de page #2"
 
-#: functions.php:675
+#: functions.php:679
 msgid "Footer Widgets #3"
 msgstr "Widgets pied de page #3"
 
-#: functions.php:700
+#: functions.php:704
 msgid "Text intro"
 msgstr "Texte d’intro"
 
-#: functions.php:706
+#: functions.php:710
 msgid "Text mentions"
 msgstr "Mentions"
 
-#: functions.php:712
+#: functions.php:716
 msgid "Action button"
 msgstr "Bouton d’action"
 
-#: functions.php:732
+#: functions.php:736
 msgid "Search for:"
 msgstr "Rechercher :"
 
-#: functions.php:734 template-parts/header-toolbar.php:25
+#: functions.php:738 template-parts/header-toolbar.php:25
 msgid "Search"
 msgstr "Chercher"
 
-#: functions.php:766
+#: functions.php:770
 #, php-format
 msgid "%1$s at %2$s"
 msgstr "%1$s à %2$s"
 
-#: functions.php:772
+#: functions.php:776
 msgid "Your comment is awaiting moderation."
 msgstr "Votre commentaire est en attente de modération."
 
-#: functions.php:781
+#: functions.php:785
 msgid "Reply"
 msgstr "Répondre"
 
-#: functions.php:787
+#: functions.php:791
 msgid "Edit"
 msgstr "Modifier"
 
@@ -447,43 +447,47 @@ msgstr "Luciole"
 msgid "Events introduction text"
 msgstr "Texte d'introduction de l’agenda"
 
-#: inc/customizer.php:887
+#: inc/customizer.php:884
+msgid "Display the search filters."
+msgstr "Affichez les filtres de recherche."
+
+#: inc/customizer.php:906
 msgid "Show background images in the banner"
 msgstr "Afficher des images de fond dans la bannière"
 
-#: inc/customizer.php:906
+#: inc/customizer.php:925
 msgid "Default banner"
 msgstr "Bannière par défaut"
 
-#: inc/customizer.php:907
+#: inc/customizer.php:926
 msgid "Choose a default picture for the page banner. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une image par défaut pour la bannière de page. (2048 x 625 pixels "
 "max.)"
 
-#: inc/customizer.php:927
+#: inc/customizer.php:946
 msgid "Blog"
 msgstr "Blog"
 
-#: inc/customizer.php:928
+#: inc/customizer.php:947
 msgid "Choose a picture for the blog banner. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une photo pour la bannière du blog. (2048 x 625 pixels max.)"
 
-#: inc/customizer.php:949
+#: inc/customizer.php:968
 msgid "Events"
 msgstr "Agenda"
 
-#: inc/customizer.php:950
+#: inc/customizer.php:969
 msgid "Choose a picture for the events banner. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une image pour la bannière de l’agenda. (2048 x 625 pixels max.)"
 
-#: inc/customizer.php:971
+#: inc/customizer.php:990
 msgid "404 error"
 msgstr "Erreur 404"
 
-#: inc/customizer.php:972
+#: inc/customizer.php:991
 msgid "Choose a picture for the 404 error page. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une image pour la page d’erreur 404. (2048 x 625 pixels max.)"
@@ -531,14 +535,6 @@ msgstr "Il n’y a aucun historique des mises à jour disponible."
 #: inc/subnav-walker.php:20
 msgid "Unfold Sub-Menu"
 msgstr "Déplier le sous-menu"
-
-#: index.php:32
-msgid "Categories"
-msgstr "Catégories"
-
-#: index.php:37
-msgid "All categories"
-msgstr "Toutes les catégories"
 
 #: template-parts/header-brand.php:15
 msgid "Go to Home Page"
@@ -623,6 +619,30 @@ msgstr "Page suivante"
 #: template-parts/page-content.php:29 template-parts/post-pagination.php:25
 msgid "Previous page"
 msgstr "Page précédente"
+
+#: template-parts/post-filters.php:17
+msgid "Categories"
+msgstr "Catégories"
+
+#: template-parts/post-filters.php:22
+msgid "All categories"
+msgstr "Toutes les catégories"
+
+#: template-parts/post-filters.php:48
+msgid "Event type"
+msgstr "Type d’événement"
+
+#: template-parts/post-filters.php:53
+msgid "All event types"
+msgstr "Tous les types d’événements"
+
+#: template-parts/post-filters.php:65
+msgid "Period"
+msgstr "Période"
+
+#: template-parts/post-filters.php:70
+msgid "All periods"
+msgstr "Toutes les périodes"
 
 #: template-parts/post-meta.php:20
 msgid "Posted "
@@ -819,10 +839,6 @@ msgstr "Maintenance"
 #~ msgid "Project types"
 #~ msgstr "Types de projets"
 
-#~ msgctxt "Taxonomy Singular Name"
-#~ msgid "Project type"
-#~ msgstr "Type de projet"
-
 #~ msgid "Project types"
 #~ msgstr "Types de projets"
 
@@ -984,9 +1000,6 @@ msgstr "Maintenance"
 
 #~ msgid "Portfolio"
 #~ msgstr "Portfolio"
-
-#~ msgid "All Creations"
-#~ msgstr "Toutes les créations"
 
 #~ msgid "No creations were found"
 #~ msgstr "Aucune création trouvée"
