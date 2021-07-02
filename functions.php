@@ -628,7 +628,7 @@ function fs_bg_img() {
 	} else if ( ( is_home() || is_category() ) && $blog ) {
 		$bg = ' data-bg="has-bg" style="background-image: url('.$blog.')"';
 	
-	} else if ( ( is_post_type_archive('event') || is_tax('event-type') ) && $agenda ) {
+	} else if ( ( is_post_type_archive('event') || is_tax('event_type') || is_tax('event_period') ) && $agenda ) {
 		$bg = ' data-bg="has-bg" style="background-image: url('.$agenda.')"';
 		
 	} else if ( '' != get_the_post_thumbnail() ) {
