@@ -356,16 +356,7 @@ figcaption {
 	padding: $grid-padding 0;
 	font-family: var(--font_italic);
 	
-	&::after {
-		content: '';
-		display: block;
-		width: 5rem;
-		height: 1px;
-		border-top: var(--text_color) 1px solid;
-		position: absolute;
-		bottom: 0;
-		left: 0;
-	}
+	@include afterline();
 }
 
 

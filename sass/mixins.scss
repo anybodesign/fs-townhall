@@ -2,6 +2,22 @@
 // = Mixins
 // -------------------------
 
+// After line
+
+@mixin afterline($color: var(--text_color)) {
+	
+	&::after {
+		content: '';
+		display: block;
+		width: 25%;
+		height: 1px;
+		border-top: $color 1px solid;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+}
+
 // dotted line
 
 @mixin dotted-line($color1: var(--text_color), $color2: transparent, $space: 4) {
