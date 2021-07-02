@@ -4,26 +4,126 @@
 
 .post-block {
 	position: relative;
+	margin: $grid-padding;
+	margin-bottom: $grid-padding*2;
 }
 .post-figure {
-	
+	@include img-opacity(.7);
+}
+.post-header {
+	margin-bottom: $grid-padding/2;
 }
 .post-content {
 	
 }
 .post-title {
+	@extend .h3-like;
+	margin-bottom: $grid-padding;
 	
+	a {
+		text-decoration: none;
+		transition: color .2s ease-in-out;
+		
+		&:hover {
+			color: var(--primary_color);
+		}
+		&:focus {
+			background-color: var(--text_color);
+			color: #fff;
+		}
+	}
 }
 .post-meta {
+	position: relative;
+	margin: 0;
+	padding-bottom: $grid-padding*2;
+	
+	@include afterline(var(--secondary_color));
 	
 	p, span {
+		margin: 0;
+		font-size: 1.4rem;
+		
 		a {
 			@include link-style();
 		}
 	}
 }
 .post-excerpt {
+	padding: $grid-padding 0;
 	
+	p {
+		margin: 0;
+	}
+	.read-more {
+		display: inline-flex;
+	}
+}
+
+// Events
+
+.post-type-archive-event {
+	
+	@include rwd(medium) {
+		
+		.post-block.type-event:first-child {
+			width: 100%;
+			display: flex;
+			flex-wrap: wrap;
+			
+			.post-figure,
+			.post-content {
+				width: 50%;
+			}
+			.post-figure {
+				padding-right: $grid-padding*2;
+			}
+		}
+	}
+}
+.event-date {
+	position: absolute;
+	top: $grid-padding/2;
+	left: $grid-padding;
+	pointer-events: none;
+	
+	@include rwd(medium) {
+		top: -$grid-padding/2;
+		left: -$grid-padding/2;
+	}
+	@include rwd(wide) {
+		top: -$grid-padding;
+		left: -$grid-padding;
+	}
+	
+	.the-date {
+		position: relative;
+		padding: $grid-padding;
+		background-color: var(--secondary_color);
+		z-index: 2;
+	}
+	
+	span {
+		font-size: 2rem;
+		font-family: var(--font_title);
+		color: #fff;
+		
+		&.year {
+			display: block;
+		}
+	}
+	
+	&::after {
+		content: '';
+		display: block;
+		width: 100%;
+		height: 100%;
+		background-color: var(--accent_color);
+		position: absolute;
+		top: $grid-padding/2;
+		left: -$grid-padding/2;
+		z-index: 1; 
+	}
 }
 
 
@@ -45,7 +145,6 @@
 
 	.post-block {
 		width: calc(100% - #{$grid-padding}*2);
-		margin: $grid-padding;
 		
 		@include rwd(small) {
 			width: calc(50% - #{$grid-padding}*2);
