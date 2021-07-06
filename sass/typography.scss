@@ -278,7 +278,6 @@ img {
 
 figure {
 	position: relative;
-	//max-width: 100%;
 	margin: 0 0 $grid-padding 0;
 	overflow: hidden;
 	
@@ -288,11 +287,9 @@ figure {
 		display: block;
 	}
 	
-	// WP block fix
-	
-	&:not([class*="is-resized"]) img {
-		width: 100%; 
-		height: auto;
+	&.noborder img,
+	img.noborder {
+		border: 0;
 	}
 
 	
@@ -351,9 +348,10 @@ figure {
 }
 
 figcaption {
+	position: relative;
 	font-size: 1.3rem; 
 	line-height: 1;
-	padding: $grid-padding 0;
+	padding: $grid-padding*1.5 0;
 	font-family: var(--font_italic);
 	
 	@include afterline();

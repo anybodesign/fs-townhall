@@ -51,12 +51,17 @@
 
 // Links / Button
 
-.wp-block-button {}
-	
 .wp-block-button__link,
-.wp-block-file__button {
-	@extend .action-btn;
+.wp-block-file .wp-block-file__button {
 	border-radius: 0;
+	@extend .action-btn;
+	
+	&.has-white-background-color {
+		&:hover,
+		&:focus {
+			color: #fff;
+		}
+	}
 }
 
 // Files
@@ -143,6 +148,17 @@
 	
 	&.alignfull {
 		width: 100%;
+	}
+	
+	// WP block fix
+	
+	&:not([class*="is-resized"]) img {
+		width: 100%; 
+		height: auto;
+	}
+	
+	figcaption {
+		margin: 0;
 	}	
 }
 
@@ -336,7 +352,9 @@ hr {
 
 
 [class*=acf-block--] {
-
+	margin-top: $grid-padding*2;
+	margin-bottom: $grid-padding*2;
+	
 	.acf-block-container {
 		width: 100%;
 		
@@ -345,6 +363,11 @@ hr {
 			margin: 0 auto;
 			max-width: $max-width;
 		}
+	}
+	
+	&:not([class*="-cta"])[style] {
+		padding: $grid-padding*4 $grid-padding;
+		margin: 0 auto;
 	}
 }
 
@@ -378,8 +401,97 @@ hr {
 // CTA
 
 .acf-block--cta {
-	.acf-block-container {
+	
+	.acf-block-cta-text {
+		& > * {
+			margin: 0 0 $grid-padding 0;
+		}
+	}
 		
+	&.boxed-cta {
+		margin: $grid-padding*2 auto $grid-padding*6 auto;
+		padding: 10rem 4rem 0 4rem;
+		
+		@include rwd(large) {
+			margin: $grid-padding*4 auto $grid-padding*8 auto;
+			padding: 28rem 4rem 0 4rem;
+		}
+		@include rwd(wide) {
+			margin-bottom: 12rem;
+			padding-top: 32rem;
+			
+			&.alignfull {
+				padding-left: $half-space;
+			}
+		}
+		
+		
+		.acf-block-container {
+			padding: $grid-padding;
+			border: var(--primary_color) 1px solid;
+			background-color: #fff;
+			position: relative;
+			transform: translateY(2rem);
+						
+			@include rwd(large) {
+				transform: translateY(5rem);
+				padding: $grid-padding*2;
+				max-width: 48rem;
+
+			}
+			@include rwd(wide) {
+				transform: translateX(1rem) translateY(8rem);
+			}
+			
+			.acf-block-cta-text,
+			.acf-block-cta-btn {
+				text-align: left;
+			}
+			.acf-block-cta-text {
+				max-width: none;
+			}
+		}
+	}
+	
+	
+	&.inline-cta {
+		padding: 0 !important;
+		
+		.acf-block-container {
+			max-width: $max-width;
+			margin: 0 auto;
+			border: var(--primary_color) 1px solid;
+			background-color: #fff;
+			padding: $grid-padding;
+			
+			@include rwd(large) {
+				padding: $grid-padding*2;
+			}
+		}
+		
+		&[style*="background"] {
+			
+			.acf-block-container {
+				background-color: transparent;
+			}
+			
+			.action-btn {
+				background-color: #fff;
+				color: var(--primary_color);
+				
+				&:hover,
+				&:focus {
+					background-color: var(--accent_color);
+				}
+			}
+		}
+		
+		@include rwd(wide) {
+			
+			.acf-block-container {
+				padding: $grid-padding*2;
+			}
+		}
 	}
 }
 
