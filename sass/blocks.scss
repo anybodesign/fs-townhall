@@ -395,6 +395,70 @@ hr {
 	.acf-block-container {
 		
 	}
+	
+	&.inside {
+		.acf-block-gallery-caption {
+			background-color: transparent;
+			
+			&::after {
+				width: 100%;
+				height: 100%;
+				border: 0;
+				background-color: var(--primary_color);
+				opacity: .8;
+				z-index: 1;
+			}
+			.acf-block-gallery-caption-title {
+				z-index: 2;
+			}
+		}
+	}
+	
+	&.outside {
+		.acf-block-gallery-caption {
+			margin-top: $grid-padding;
+			margin-bottom: $grid-padding;
+			
+			@include afterline(var(--secondary_color));
+		}
+		.acf-block-gallery-caption-title {
+			@extend h4;
+			margin: 0;
+		}
+		
+		p {
+			margin: 0 0 $grid-padding 0;
+		}
+		.read-more {
+			display: none;
+		}
+		.action-btn {
+			display: inline-flex;
+		}
+		
+		.acf-block-gallery-item {
+			a + p {
+				margin-top: $grid-padding;
+			}
+			a:focus {
+				.acf-block-gallery-caption-title {
+					background-color: var(--text_color);
+					color: #fff;
+				}
+				.acf-block-gallery-caption::after {
+					width: 12.5%;
+				}
+			}
+			a:hover {
+				.acf-block-gallery-caption-title {
+					color: var(--primary_color);
+				}
+				.acf-block-gallery-caption::after {
+					width: 12.5%;
+				}
+			}
+		}
+	}
 }
 
 
