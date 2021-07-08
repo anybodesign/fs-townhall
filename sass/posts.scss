@@ -183,9 +183,15 @@
 	
 	[class^="filter-"] {
 		padding: 0 $grid-padding;
+		margin-bottom: $grid-padding;
+		
+		&:last-of-type {
+			margin-bottom: 0;
+		}
 		
 		@include rwd(small) {
 			width: 50%;
+			margin-bottom: 0;
 		}
 		@include rwd(medium) {
 			width: 33.3333%;
