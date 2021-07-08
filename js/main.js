@@ -88,7 +88,24 @@ jQuery(document).ready(function($) {
 	});
 
 
-				
+	// Toggle Search
+
+	$('#search_toggle').on('click', function () {
+
+		if($('#site_search').is(':hidden') == true) {
+			
+			$(this).attr('aria-expanded','true');
+			$('#site_search').attr('aria-hidden','false').slideDown();
+			$('#s').focus();
+			
+		} else {
+			
+			$(this).attr('aria-expanded','false');
+			$('#site_search').attr('aria-hidden','true').slideUp();
+		}
+		
+	});
+	
 
 	// Responsive Video Players (Youtube, Vimeo)
 			

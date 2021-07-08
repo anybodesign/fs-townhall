@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FS Townhall\n"
 "POT-Creation-Date: 2021-07-02 12:15+0200\n"
-"PO-Revision-Date: 2021-07-02 12:15+0200\n"
+"PO-Revision-Date: 2021-07-08 11:25+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -174,7 +174,7 @@ msgstr "Rechercher :"
 
 #: functions.php:744 template-parts/header-toolbar.php:25
 msgid "Search"
-msgstr "Chercher"
+msgstr "Recherche"
 
 #: functions.php:776
 #, php-format

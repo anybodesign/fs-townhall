@@ -42,6 +42,9 @@
 		if ( ! is_page_template( 'pagecustom-maintenance.php' ) ) {
 			get_template_part('template-parts/header', 'skiplinks');
 		}
+		if ( get_theme_mod('searchbar') ) {
+			get_template_part('template-parts/header', 'searchbox');
+		}
 	?>
 	
 	<header role="banner" id="site_head"<?php if ( $header_white ) { echo ' class="white-text"'; } ?>>
