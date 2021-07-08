@@ -567,6 +567,7 @@ hr {
 		
 		.acf-block-post-item {
 			@extend .post-block;
+			padding: 0;
 		}
 		.acf-block-post-figure {
 			@extend .post-figure;
@@ -580,9 +581,16 @@ hr {
 		.acf-block-post-excerpt {
 			@extend .post-excerpt;
 		}
+		
+		.acf-block-post-intro-title,
+		.acf-block-post-link {
+			text-align: center;	
+		}
+		.acf-block-post-link {
+			padding: $grid-padding*3 $grid-padding;
+		}
 	}
 }
-
 
 // Testimonial
 
@@ -789,7 +797,42 @@ hr {
 // Banner
 
 .acf-block--pagebanner {
+	
+	&.alignfull {
+		padding: 0;
+		
+		@include rwd(wide) {
+			.acf-block-banner-text {
+				left: $half-space;
+			}
+		}
+	}
+	
 	.acf-block-container {
 		
+		.scroll-down {
+			background-color: transparent;
+			
+			img {
+				width: 4.4rem;
+				height: 4.4rem;
+				background-color: var(--text_color);
+				border-radius: 50%;
+				padding: $grid-padding;
+			}
+			
+			&:hover,
+			&:focus {
+				img {
+					animation: pop_in .5s;
+				}
+			}
+		}
+	}
+	
+	.acf-block-banner-text {
+		width: 90%;
+		margin: 0 auto;
+		margin-top: -10rem;
 	}	
 }
