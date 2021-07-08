@@ -14,6 +14,7 @@
 		@include rwd(large) {
 			display: flex;
 			flex-wrap: wrap;
+			flex-direction: row-reverse;
 		}
 	}
 }
@@ -160,13 +161,54 @@
 
 .page-sidebar {
 	padding: $grid-padding;
-
+	
+	position: absolute;
+	top: auto; 
+	left: 0;
+	width: 100%;
+	padding: $grid-padding;
+	background-color: #fff;
+	
+	transform: translateX(-110%);
+	transition: transform .4s ease-in-out;
+	z-index: 100;
+	
+	.menu-opened + & {
+		transform: translateX(0);
+	}
+	
+	@include rwd(small) {
+		width: 80%;
+	}
+	@include rwd(medium) {
+		width: 60%;
+	}
+	
 	@include rwd(large) {
-		
+		display: block;
+		position: relative;
+		left: auto;
+		padding: 0;
+		width: auto;
+		background-color: transparent;
+		transform: none;
+			
 		.has-sidebar & {
 			width: 25%;
 		}
 	}	
+}
+
+#sidebar_toggle {
+	position: absolute;
+	top: auto;
+	right: $grid-padding;
+	transform: translateY(-125%);
+	background-color: #fff;
+	
+	.burger-title {
+		@include a11y-hidden();
+	}
 }
 
 

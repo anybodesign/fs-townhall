@@ -527,8 +527,30 @@
 	position: relative;
 	margin-bottom: $grid-padding;
 	
+	&::before {
+		content: '';
+		display: block;
+		position: absolute;
+		width: 6rem;
+		height: calc(100% - .2rem);
+		top: 0; 
+		right: 0;
+		background-image: linear-gradient(to left, #fff 0%, #fff 5%, rgba(255, 255, 255, 0) 100%);
+		pointer-events: none;
+		z-index: 5;
+	}
+	
 	.inner {
 		padding: $grid-padding;
+		padding-right: 7rem;
+		
+		overflow: hidden;
+		overflow-x: auto;
+		white-space: nowrap;
+		
+		@include rwd(large) {
+			padding-right: $grid-padding;
+		}
 	}
 	
 	span {

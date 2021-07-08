@@ -22,6 +22,20 @@ get_header(); ?>
 				
 				<div class="page-wrap<?php if ($sidebar) { echo ' has-sidebar'; } ?>">
 					
+					<?php if ($sidebar) { ?>
+						
+						<button class="burger" id="sidebar_toggle" type="button">
+							<span>
+								<span class="burger-title">
+									<?php esc_html_e('Sidebar Menu', 'fs-townhall'); ?>
+								</span>
+							</span>
+						</button>
+						
+						<?php get_sidebar(); ?>
+						
+					<?php } ?>
+					
 					<div class="page-content">
 							
 						<?php // The Loop
@@ -49,8 +63,6 @@ get_header(); ?>
 						endif; 
 						?>
 					</div>
-					
-					<?php if ($sidebar) { get_sidebar(); } ?>
 					
 				</div>
 
