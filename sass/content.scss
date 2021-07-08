@@ -108,6 +108,10 @@
 		& .acf-block-text--1col,
 		& #comments {
 			padding-right: 20rem;
+			
+			.has-sidebar & {
+				padding-right: 0;
+			}
 		}
 		
 		& > p.has-text-align-center {
@@ -155,6 +159,7 @@
 		
 		.has-sidebar & {
 			width: 75%;
+			padding-right: 8.3333%;
 		}
 	}	
 }
@@ -209,6 +214,17 @@
 	.burger-title {
 		@include a11y-hidden();
 	}
+}
+
+// Sharebox
+
+.share-box {
+	margin: $grid-padding*2 0;
+	
+	& > p {
+		font-family: var(--font_italic);
+		font-size: 1.6rem;
+	}	
 }
 
 

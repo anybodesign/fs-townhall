@@ -372,6 +372,16 @@
 /* = Comments
 /* ------------------------- */
 
+.comments-area {
+	margin-top: $grid-padding*4;
+}
+.comments-title {
+	padding-top: $grid-padding*2;
+	
+	@include dotted-line();
+	background-position: 0 top;	
+}
+
 .comment-list {
 	list-style: none;
 	padding-left: 0;	

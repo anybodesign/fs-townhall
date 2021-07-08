@@ -15,8 +15,8 @@ get_header(); ?>
 				
 				<div class="page-wrap has-sidebar">					
 					<?php 
-						get_template_part( 'template-parts/page', 'content' ); 
 						get_sidebar();
+						get_template_part( 'template-parts/page', 'content' ); 
 					?>
 				</div>
 				
