@@ -246,6 +246,10 @@
 .widget-title {
 	@extend h4;
 	margin-bottom: $grid-padding;
+	
+	&:first-of-type {
+		margin-top: 0;
+	}
 }
 
 /* ------------------------- */

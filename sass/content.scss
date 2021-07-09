@@ -220,7 +220,7 @@
 // Sharebox
 
 .share-box {
-	margin: $grid-padding*2 0;
+	margin: $grid-padding*2 auto;
 	
 	& > p {
 		font-family: var(--font_italic);
