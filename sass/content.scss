@@ -176,7 +176,7 @@
 	
 	transform: translateX(-110%);
 	transition: transform .4s ease-in-out;
-	z-index: 100;
+	z-index: 80;
 	
 	.menu-opened + & {
 		transform: translateX(0);
@@ -210,6 +210,7 @@
 	right: $grid-padding;
 	transform: translateY(-125%);
 	background-color: #fff;
+	z-index: 90;
 	
 	.burger-title {
 		@include a11y-hidden();
