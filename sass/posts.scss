@@ -11,13 +11,14 @@
 	@include img-opacity(.7);
 }
 .post-header {
-	margin-bottom: $grid-padding/2;
+	margin-bottom: $grid-padding;
 }
 .post-content {
 	
 }
 .post-title {
-	@extend .h3-like;
+	font-family: var(--font_title);
+	font-size: 2.8rem;
 	margin-bottom: $grid-padding;
 	
 	a {
@@ -50,6 +51,20 @@
 		
 		a {
 			@include link-style();
+		}
+	}
+	.meta-comments {
+		padding-left: 1.7rem;
+		
+		a::before {
+			content: '';
+			display: inline-block;
+			vertical-align: middle;
+			width: 1.6rem;
+			height: 1.6rem;
+			background: url(img/ui/bubble.svg) 0 0 no-repeat;
+			background-size: contain;
+			margin-left: -1.7rem;
 		}
 	}
 }
