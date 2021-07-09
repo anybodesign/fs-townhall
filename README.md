@@ -6,7 +6,7 @@ A WordPress Theme for your town (or your village) by Thomas Villain @ anybodesig
 
 ## Custom post type (Events)
 
-We can activate a plugin to add the events feature. Then you’ll fin some options in the Customizer.
+We can activate a plugin to add the events feature. Then you’ll find some related options in the Customizer.
 
 
 ## Changelog
