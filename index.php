@@ -9,10 +9,14 @@
  * @since 1.0
  * @version 1.0
  */ 
-	if ( get_theme_mod('blog_sidebar') != false || null == get_theme_mod('blog_sidebar') ) {
-		$sidebar = true;
-	} elseif ( is_search() || is_post_type_archive('event') ) {
+ //get_theme_mod('blog_sidebar') != false && ( ! is_search() || ! is_post_type_archive('event') ) || get_theme_mod('blog_sidebar') == null && ( ! is_search() || ! is_post_type_archive('event') )
+ 
+	if ( is_search() || is_post_type_archive('event') ) {
 		$sidebar = false;
+	} else if ( get_theme_mod('blog_sidebar') == false ) {
+		$sidebar = false;
+	} else if ( get_theme_mod('blog_sidebar') != false || get_theme_mod('blog_sidebar') == null ) {
+		$sidebar = true;
 	} else {
 		$sidebar = false;
 	}	

@@ -9,7 +9,11 @@
  * @since 1.0
  * @version 1.0
  */
- 	if ( get_theme_mod('post_sidebar') != false || null == get_theme_mod('post_sidebar') ) {
+ 	if ( is_singular('event') ) {
+		$sidebar = false;
+	} else if ( get_theme_mod('post_sidebar') == false ) {
+		$sidebar = false;
+	} else if ( get_theme_mod('post_sidebar') != false || get_theme_mod('post_sidebar') == null ) {
 		$sidebar = true;
 	} else {
 		$sidebar = false;
