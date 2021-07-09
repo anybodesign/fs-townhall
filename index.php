@@ -26,8 +26,6 @@ get_header(); ?>
 							get_template_part( 'template-parts/sidebar', 'burger' );
 							get_sidebar(); 
 					} ?>
-						
-					<?php } ?>
 					
 					<div class="page-content">
 							
