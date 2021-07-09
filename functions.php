@@ -1,6 +1,6 @@
 <?php if ( !defined('ABSPATH') ) die();
 	
-define( 'FS_THEME_VERSION', '1.1' );
+define( 'FS_THEME_VERSION', '1.2' );
 define( 'FS_THEME_DIR', get_template_directory() );
 define( 'FS_THEME_URL', get_template_directory_uri() );
 
@@ -478,8 +478,12 @@ add_action( 'init', 'fs_custom_nav_menus' );
 
 function fs_nav_classes( $classes, $item ) {
     
+	$blogpage = get_option( 'page_for_posts' );
+	$blogpage_content = get_post( $blogpage );
+	$itemname = $blogpage_content->post_title;
+	
 	// Remove active state on page for posts
-    if( ( is_post_type_archive() || is_tax() || is_404() || is_search() || is_singular('event') ) && $item->title == 'Actualités' ) {
+    if( ( is_post_type_archive() || is_tax() || is_404() || is_search() || is_singular('event') ) && $item->title == $itemname ) {
         $classes = array_diff( $classes, array( 'current_page_parent' ) );
     }
     return $classes;
