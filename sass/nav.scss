@@ -46,13 +46,6 @@
 		font-size: 1.4rem;
 		margin-left: $grid-padding;
 		
-		@include rwd(medium) {
-			.has-search & {
-				margin-left: 0;
-				margin-right: $grid-padding;
-			}
-		}
-		
 		& > a {
 			text-decoration: none;
 			@include link-style();

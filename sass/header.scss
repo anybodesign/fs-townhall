@@ -49,13 +49,13 @@
 
 	&.has-search {
 		display: flex;
-		flex-direction: column;
-		align-items: flex-end; 
-			
-		@include rwd(small) {
-			flex-direction: row;
-			align-items: center;
-			justify-content: flex-end;
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-end;
+		padding: 0;
+		
+		@include rwd(large) {
+			padding-right: $grid-padding;
 		}
 	}	
 }
@@ -258,6 +258,7 @@
 	display: block;
 	margin: 0;
 	max-width: 22rem;
+	line-height: 1.2;
 	
 	@include rwd(medium) {
 		max-width: none;
