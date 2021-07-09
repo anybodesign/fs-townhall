@@ -687,6 +687,23 @@ function fs_customize_register($fs_customize) {
 			)
 		);
 		
+		$fs_customize->add_setting(
+			'post_sidebar', 
+			array(
+				'default'			=> true,
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'post_sidebar', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('Show the sidebar on single posts', 'fs-townhall'),
+				'section'		=> 'fs_blog_section',
+				'settings'		=> 'post_sidebar',
+			)
+		);
+		
 		// Category dropdown
 		
 		$fs_customize->add_setting(

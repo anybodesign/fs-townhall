@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: FS Townhall\n"
-"POT-Creation-Date: 2021-07-02 12:15+0200\n"
-"PO-Revision-Date: 2021-07-08 11:25+0200\n"
+"POT-Creation-Date: 2021-07-09 16:21+0200\n"
+"PO-Revision-Date: 2021-07-09 16:22+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -172,7 +172,8 @@ msgstr "Bouton d’action"
 msgid "Search for:"
 msgstr "Rechercher :"
 
-#: functions.php:744 template-parts/header-toolbar.php:25
+#: functions.php:744 template-parts/header-searchbox.php:5
+#: template-parts/header-searchbox.php:13 template-parts/header-toolbar.php:23
 msgid "Search"
 msgstr "Recherche"
 
@@ -391,27 +392,31 @@ msgstr "Texte d’introduction du blog"
 msgid "Show the sidebar on the blog page"
 msgstr "Afficher la barre latérale sur la page du blog"
 
-#: inc/customizer.php:703
+#: inc/customizer.php:701
+msgid "Show the sidebar on single posts"
+msgstr "Afficher la barre latérale sur les articles"
+
+#: inc/customizer.php:720
 msgid "Show the category dropdown on the blog page"
 msgstr "Afficher le sélecteur de catégories sur les pages du blog"
 
-#: inc/customizer.php:722
+#: inc/customizer.php:739
 msgid "Excerpt lenght (number of words)"
 msgstr "Longueur de l’extrait (nombre de mots)"
 
-#: inc/customizer.php:741
+#: inc/customizer.php:758
 msgid "Show the publication date in post meta"
 msgstr "Afficher la date de publication dans les post meta"
 
-#: inc/customizer.php:757
+#: inc/customizer.php:774
 msgid "Show the author in post meta"
 msgstr "Afficher l’auteur dans les post meta"
 
-#: inc/customizer.php:773
+#: inc/customizer.php:790
 msgid "Show the category in post meta"
 msgstr "Afficher la catégorie dans les post meta"
 
-#: inc/customizer.php:792
+#: inc/customizer.php:809
 msgid ""
 "Add basic social networks sharing buttons on single posts (Facebook, "
 "Twitter, LinkedIn, e-mail)"
@@ -419,87 +424,87 @@ msgstr ""
 "Ajouter des boutons de partage de base pour les réseaux sociaux sur les "
 "articles (Facebook, Twitter, LinkedIn, e-mail)"
 
-#: inc/customizer.php:816
+#: inc/customizer.php:833
 msgid "Layout version"
 msgstr "Version de mise en page"
 
-#: inc/customizer.php:819
+#: inc/customizer.php:836
 msgid "Version 1"
 msgstr "Version 1"
 
-#: inc/customizer.php:820
+#: inc/customizer.php:837
 msgid "Version 2"
 msgstr "Version 2"
 
-#: inc/customizer.php:840
+#: inc/customizer.php:857
 msgid "Choose your fonts"
 msgstr "Choisissez vos polices"
 
-#: inc/customizer.php:843
+#: inc/customizer.php:860
 msgid "Andes Neue & Atkinson"
 msgstr "Andes Neue et Atkinson"
 
-#: inc/customizer.php:844
+#: inc/customizer.php:861
 msgid "Cooper Hewit & Atkinson"
 msgstr "Cooper Hewit et Atkinson"
 
-#: inc/customizer.php:845
+#: inc/customizer.php:862
 msgid "Barlow"
 msgstr "Barlow"
 
-#: inc/customizer.php:846
+#: inc/customizer.php:863
 msgid "Bebas & Bitter"
 msgstr "Bebas & Bitter"
 
-#: inc/customizer.php:847
+#: inc/customizer.php:864
 msgid "Luciole"
 msgstr "Luciole"
 
-#: inc/customizer.php:866
+#: inc/customizer.php:883
 msgid "Events introduction text"
 msgstr "Texte d'introduction de l’agenda"
 
-#: inc/customizer.php:884
+#: inc/customizer.php:901
 msgid "Display the search filters."
 msgstr "Affichez les filtres de recherche."
 
-#: inc/customizer.php:906
+#: inc/customizer.php:923
 msgid "Show background images in the banner"
 msgstr "Afficher des images de fond dans la bannière"
 
-#: inc/customizer.php:925
+#: inc/customizer.php:942
 msgid "Default banner"
 msgstr "Bannière par défaut"
 
-#: inc/customizer.php:926
+#: inc/customizer.php:943
 msgid "Choose a default picture for the page banner. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une image par défaut pour la bannière de page. (2048 x 625 pixels "
 "max.)"
 
-#: inc/customizer.php:946
+#: inc/customizer.php:963
 msgid "Blog"
 msgstr "Blog"
 
-#: inc/customizer.php:947
+#: inc/customizer.php:964
 msgid "Choose a picture for the blog banner. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une photo pour la bannière du blog. (2048 x 625 pixels max.)"
 
-#: inc/customizer.php:968
+#: inc/customizer.php:985
 msgid "Events"
 msgstr "Agenda"
 
-#: inc/customizer.php:969
+#: inc/customizer.php:986
 msgid "Choose a picture for the events banner. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une image pour la bannière de l’agenda. (2048 x 625 pixels max.)"
 
-#: inc/customizer.php:990
+#: inc/customizer.php:1007
 msgid "404 error"
 msgstr "Erreur 404"
 
-#: inc/customizer.php:991
+#: inc/customizer.php:1008
 msgid "Choose a picture for the 404 error page. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une image pour la page d’erreur 404. (2048 x 625 pixels max.)"
@@ -564,6 +569,14 @@ msgstr "Aller à la page d'accueil"
 msgid "Menu"
 msgstr "Menu"
 
+#: template-parts/header-searchbox.php:11
+msgid "Enter keyword"
+msgstr "Entrer un mot clé"
+
+#: template-parts/header-searchbox.php:12
+msgid "Search for"
+msgstr "Rechercher"
+
 #: template-parts/header-skiplinks.php:6
 msgid "Go to main content"
 msgstr "Aller au contenu principal"
@@ -572,19 +585,11 @@ msgstr "Aller au contenu principal"
 msgid "Go to main menu"
 msgstr "Aller au menu principal"
 
-#: template-parts/header-toolbar.php:23
-msgid "Enter keyword"
-msgstr "Entrer un mot clé"
-
-#: template-parts/header-toolbar.php:24
-msgid "Search for"
-msgstr "Rechercher"
-
-#: template-parts/header-toolbar.php:33
+#: template-parts/header-toolbar.php:31
 msgid "High contrast"
 msgstr "Contraste élevé"
 
-#: template-parts/header-toolbar.php:37
+#: template-parts/header-toolbar.php:35
 msgid "Restore contrast"
 msgstr "Retablir le contraste"
 
@@ -648,21 +653,13 @@ msgstr "Catégories"
 msgid "All categories"
 msgstr "Toutes les catégories"
 
-#: template-parts/post-filters.php:48
+#: template-parts/post-filters.php:48 template-parts/post-filters.php:53
 msgid "Event type"
 msgstr "Type d’événement"
 
-#: template-parts/post-filters.php:53
-msgid "All event types"
-msgstr "Tous les types d’événements"
-
-#: template-parts/post-filters.php:65
+#: template-parts/post-filters.php:65 template-parts/post-filters.php:70
 msgid "Period"
 msgstr "Période"
-
-#: template-parts/post-filters.php:70
-msgid "All periods"
-msgstr "Toutes les périodes"
 
 #: template-parts/post-meta.php:26
 msgid "by&nbsp;"
@@ -707,6 +704,10 @@ msgstr "Partager sur LinkedIn"
 msgid "Share by e-mail"
 msgstr "Partager par email"
 
+#: template-parts/sidebar-burger.php:14
+msgid "Sidebar Menu"
+msgstr "Menu barre latérale"
+
 #. Theme Name of the plugin/theme
 msgid "FS Townhall"
 msgstr "FS Townhall"
@@ -730,6 +731,12 @@ msgstr "https://anybodesign.com/"
 #. Template Name of the plugin/theme
 msgid "Maintenance"
 msgstr "Maintenance"
+
+#~ msgid "All event types"
+#~ msgstr "Tous les types d’événements"
+
+#~ msgid "All periods"
+#~ msgstr "Toutes les périodes"
 
 #~ msgid "Playfair & Atkinson"
 #~ msgstr "Playfair & Atkinson"

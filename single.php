@@ -9,13 +9,21 @@
  * @since 1.0
  * @version 1.0
  */
+ 	if ( get_theme_mod('post_sidebar') != false || null == get_theme_mod('post_sidebar') ) {
+		$sidebar = true;
+	} else {
+		$sidebar = false;
+	}
 get_header(); ?>
 
 				<?php get_template_part( 'template-parts/page', 'banner' ); ?>
 				
-				<div class="page-wrap has-sidebar">					
+				<div class="page-wrap<?php if ($sidebar) { echo ' has-sidebar'; } ?>">					
 					<?php 
-						get_sidebar();
+						if ($sidebar) { 					
+							get_template_part( 'template-parts/sidebar', 'burger' );
+							get_sidebar();						
+						}						
 						get_template_part( 'template-parts/page', 'content' ); 
 					?>
 				</div>
