@@ -578,6 +578,9 @@ hr {
 			@extend .post-block;
 			padding: 0;
 		}
+		.acf-block-post-header {
+			@extend .post-header;
+		}
 		.acf-block-post-figure {
 			@extend .post-figure;
 		}
