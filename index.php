@@ -9,12 +9,12 @@
  * @since 1.0
  * @version 1.0
  */ 
-	if ( get_theme_mod('blog_sidebar') != true ) {
-		$sidebar = false;
+	if ( get_theme_mod('blog_sidebar') != false || null == get_theme_mod('blog_sidebar') ) {
+		$sidebar = true;
 	} elseif ( is_search() || is_post_type_archive('event') ) {
 		$sidebar = false;
 	} else {
-		$sidebar = true;
+		$sidebar = false;
 	}	
 get_header(); ?>
 
@@ -22,17 +22,10 @@ get_header(); ?>
 				
 				<div class="page-wrap<?php if ($sidebar) { echo ' has-sidebar'; } ?>">
 					
-					<?php if ($sidebar) { ?>
-						
-						<button class="burger" id="sidebar_toggle" type="button">
-							<span>
-								<span class="burger-title">
-									<?php esc_html_e('Sidebar Menu', 'fs-townhall'); ?>
-								</span>
-							</span>
-						</button>
-						
-						<?php get_sidebar(); ?>
+					<?php if ($sidebar) { 					
+							get_template_part( 'template-parts/sidebar', 'burger' );
+							get_sidebar(); 
+					} ?>
 						
 					<?php } ?>
 					
