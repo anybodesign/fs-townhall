@@ -355,6 +355,10 @@ hr {
 	margin-top: $grid-padding*2;
 	margin-bottom: $grid-padding*2;
 	
+	&:first-of-type {
+		margin-top: 0;
+	}
+	
 	.acf-block-container {
 		width: 100%;
 		
@@ -807,6 +811,25 @@ hr {
 			}
 		}
 	}
+
+	// Img & Video
+	
+	.banner-bg,
+	.banner-video,
+	.banner-slideshow,
+	.banner-slideshow .slick-track,
+	.banner-slideshow .slick-list,
+	.banner-slideshow .slick-item,
+	.banner-slideshow .slick-item > img {
+		height: 36rem;
+		
+		@include rwd(medium) {
+			height: 45rem;	
+		}
+		@include rwd(large) {
+			height: 68vh;	
+		}
+	}	
 	
 	.acf-block-container {
 		
