@@ -9,7 +9,6 @@
  * @since 1.0
  * @version 1.0
  */ 
- //get_theme_mod('blog_sidebar') != false && ( ! is_search() || ! is_post_type_archive('event') ) || get_theme_mod('blog_sidebar') == null && ( ! is_search() || ! is_post_type_archive('event') )
  
 	if ( is_search() || is_post_type_archive('event') ) {
 		$sidebar = false;
