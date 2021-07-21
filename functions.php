@@ -355,17 +355,6 @@ function fs_scripts_load() {
 				null, 
 				'screen' 
 			);
-			
-			// Main stylesheet
-			
-			wp_register_style( 
-				'fs-townhall-style', 
-				get_stylesheet_uri(), 
-				array(), 
-				FS_THEME_VERSION, 
-				'screen'
-			);
-
 		
 		// Enqueue JS
 		// ------------------------
@@ -418,28 +407,41 @@ function fs_scripts_load() {
 			//wp_enqueue_script( 'focus-visible' );
 			wp_enqueue_script( 'skiplink-focus-fix' );
 			wp_enqueue_script( 'main' );			
-
-
+			
+			
 		// Enqueue CSS
 		// ------------------------
-
-			
+		
 			
 			// Fancybox
 			if ( get_theme_mod('use_fancybox') == true ) {
 				wp_enqueue_style( 'fancybox-css' );
 			}
-	
+			
 			// Back to top
 			if ( get_theme_mod('back2top') == true ) {
 				wp_enqueue_style( 'back2top' );
 			}
-			
-			// Main stylesheet
-			wp_enqueue_style( 'fs-townhall-style' );
 	}
 }    
 add_action( 'wp_enqueue_scripts', 'fs_scripts_load' );
+
+
+// Main stylesheet
+
+function fs_main_style() {
+		
+		wp_register_style( 
+			'fs-townhall-style', 
+			get_stylesheet_uri(), 
+			array(), 
+			FS_THEME_VERSION, 
+			'screen'
+		);
+		
+		wp_enqueue_style( 'fs-townhall-style' );
+}
+add_action( 'wp_enqueue_scripts', 'fs_main_style' );
 
 
 // ------------------------
@@ -657,44 +659,46 @@ function fs_bg_img() {
 
 // Widgets
 
-function fs_widgets_init() {
-	register_sidebar(array(
-		'name'			=>	esc_html__( 'Blog Widgets', 'fs-townhall' ),
-		'id'			=>	'widgets_area1',
-		'description' 	=> 	'',
-		'before_widget' => 	'<div id="%1$s" class="widget-container %2$s">',
-		'after_widget' 	=> 	'</div>',
-		'before_title' 	=> 	'<p class="widget-title">',
-		'after_title' 	=> 	'</p>',
-	));
-	register_sidebar(array(
-		'name'			=>	esc_html__( 'Footer Widgets #1', 'fs-townhall' ),
-		'id'			=>	'widgets_footer1',
-		'description' 	=> 	'',
-		'before_widget' => 	'<div id="%1$s" class="widget-container %2$s">',
-		'after_widget' 	=> 	'</div>',
-		'before_title' 	=> 	'<p class="widget-title">',
-		'after_title' 	=> 	'</p>',
-	));
-	register_sidebar(array(
-		'name'			=>	esc_html__( 'Footer Widgets #2', 'fs-townhall' ),
-		'id'			=>	'widgets_footer2',
-		'description' 	=> 	'',
-		'before_widget' => 	'<div id="%1$s" class="widget-container %2$s">',
-		'after_widget' 	=> 	'</div>',
-		'before_title' 	=> 	'<p class="widget-title">',
-		'after_title' 	=> 	'</p>',
-	));
-	register_sidebar(array(
-		'name'			=>	esc_html__( 'Footer Widgets #3', 'fs-townhall' ),
-		'id'			=>	'widgets_footer3',
-		'description' 	=> 	'',
-		'before_widget' => 	'<div id="%1$s" class="widget-container %2$s">',
-		'after_widget' 	=> 	'</div>',
-		'before_title' 	=> 	'<p class="widget-title">',
-		'after_title' 	=> 	'</p>',
-	));
-}
+if ( ! function_exists( 'fs_widgets_init' ) ) :
+	function fs_widgets_init() {
+		register_sidebar(array(
+			'name'			=>	esc_html__( 'Blog Widgets', 'fs-townhall' ),
+			'id'			=>	'widgets_area1',
+			'description' 	=> 	'',
+			'before_widget' => 	'<div id="%1$s" class="widget-container %2$s">',
+			'after_widget' 	=> 	'</div>',
+			'before_title' 	=> 	'<p class="widget-title">',
+			'after_title' 	=> 	'</p>',
+		));
+		register_sidebar(array(
+			'name'			=>	esc_html__( 'Footer Widgets #1', 'fs-townhall' ),
+			'id'			=>	'widgets_footer1',
+			'description' 	=> 	'',
+			'before_widget' => 	'<div id="%1$s" class="widget-container %2$s">',
+			'after_widget' 	=> 	'</div>',
+			'before_title' 	=> 	'<p class="widget-title">',
+			'after_title' 	=> 	'</p>',
+		));
+		register_sidebar(array(
+			'name'			=>	esc_html__( 'Footer Widgets #2', 'fs-townhall' ),
+			'id'			=>	'widgets_footer2',
+			'description' 	=> 	'',
+			'before_widget' => 	'<div id="%1$s" class="widget-container %2$s">',
+			'after_widget' 	=> 	'</div>',
+			'before_title' 	=> 	'<p class="widget-title">',
+			'after_title' 	=> 	'</p>',
+		));
+		register_sidebar(array(
+			'name'			=>	esc_html__( 'Footer Widgets #3', 'fs-townhall' ),
+			'id'			=>	'widgets_footer3',
+			'description' 	=> 	'',
+			'before_widget' => 	'<div id="%1$s" class="widget-container %2$s">',
+			'after_widget' 	=> 	'</div>',
+			'before_title' 	=> 	'<p class="widget-title">',
+			'after_title' 	=> 	'</p>',
+		));
+	}
+endif;	
 add_action( 'widgets_init', 'fs_widgets_init' );
 
 
