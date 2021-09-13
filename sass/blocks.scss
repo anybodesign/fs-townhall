@@ -840,8 +840,10 @@ hr {
 	}	
 	
 	.acf-block-container {
+		position: relative;
 		
 		.scroll-down {
+			
 			background-color: transparent;
 			
 			img {
@@ -862,8 +864,63 @@ hr {
 	}
 	
 	.acf-block-banner-text {
+		position: absolute;
 		width: 90%;
-		margin: 0 auto;
-		margin-top: -10rem;
+		left: 5%;
+		transform: translateY(-130%);
+		text-align: center;
+		
+		p {
+			margin: 0;	
+		}
+		
+		.scroll-down {
+			position: absolute;
+			margin: 0 auto;
+			left: 50%;
+			bottom: -5.2rem;
+			margin-left: -2.2rem;
+		}
+		
+		@include rwd(large) {
+			text-align: left;
+			transform: translateY(-2rem);
+			
+			.scroll-down {
+				position: absolute;
+				bottom: -6rem;
+				left: auto;
+				margin-left: -2.2rem;
+			}
+			
+		}
 	}	
+}
+
+// Files
+
+.acf-block--files {
+	
+	.acf-block-container {
+		
+		.file-item {
+			border-bottom-style: dotted;
+			border-bottom-color: var(--bg_color); 
+			
+			a {
+				@include link-style();
+			}
+			
+			.file-infos {
+				font-family: var(--font_italic);
+			}
+			.file-item-name {
+				font-family: var(--font_bold);
+			}
+			.file-item-type,
+			.file-item-size {
+				
+			}
+		}
+	}
 }
