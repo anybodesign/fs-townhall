@@ -11,6 +11,10 @@ We can activate a plugin to add the events feature. Then you’ll find some rela
 
 ## Changelog
 
+### 1.3 - 2021.09.13
+* Some blocks CSS: banner & files
+* Some fixing & cleaning
+
 ### 1.2 - 2021.07.09
 * Sidebar display fix
 * Sidebar option for single posts
