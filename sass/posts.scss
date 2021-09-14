@@ -7,6 +7,7 @@
 	margin: $grid-padding;
 	margin-bottom: $grid-padding*2;
 }
+
 .post-figure {
 	@include img-opacity(.7);
 }
@@ -37,9 +38,9 @@
 .post-meta {
 	position: relative;
 	margin: 0;
-	padding-bottom: $grid-padding*2;
+	padding-bottom: $grid-padding;
 	
-	@include afterline(var(--secondary_color));
+	//@include afterline(var(--secondary_color));
 	
 	.single &::after {
 		content: none;
@@ -83,11 +84,17 @@
 
 // Events
 
+.the-posts,
 .post-type-archive-event {
+	
+	.page-wrap.has-sidebar & .post-block.sticky {
+		width: 100%;
+	}
 	
 	@include rwd(medium) {
 		
-		.post-block.type-event:first-child {
+		.page-wrap:not(.has-sidebar) & .post-block.sticky,
+		& .post-block.type-event:first-child {
 			width: 100%;
 			display: flex;
 			flex-wrap: wrap;
