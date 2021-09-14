@@ -40,12 +40,6 @@
 	margin: 0;
 	padding-bottom: $grid-padding;
 	
-	//@include afterline(var(--secondary_color));
-	
-	.single &::after {
-		content: none;
-	}
-	
 	p, span {
 		margin: 0;
 		font-size: 1.4rem;
