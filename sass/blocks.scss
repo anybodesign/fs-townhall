@@ -867,7 +867,8 @@ hr {
 		position: absolute;
 		width: 90%;
 		left: 5%;
-		transform: translateY(-130%);
+		$shift: calc(-100% - 4rem);
+		transform: translateY($shift);
 		text-align: center;
 		
 		p {
@@ -878,7 +879,7 @@ hr {
 			position: absolute;
 			margin: 0 auto;
 			left: 50%;
-			bottom: -5.2rem;
+			bottom: -6rem;
 			margin-left: -2.2rem;
 		}
 		
@@ -888,7 +889,6 @@ hr {
 			
 			.scroll-down {
 				position: absolute;
-				bottom: -6rem;
 				left: auto;
 				margin-left: -2.2rem;
 			}
