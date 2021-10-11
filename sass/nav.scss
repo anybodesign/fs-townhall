@@ -518,7 +518,11 @@
 
 .breadcrumbs-nav {
 	position: relative;
-	margin-bottom: $grid-padding;
+	margin-bottom: $grid-padding*2;
+	
+	@include rwd(large) {
+		margin-bottom: $grid-padding*4;
+	}
 	
 	&::before {
 		content: '';
@@ -576,6 +580,12 @@
 		&.current_page_item a {
 			font-family: var(--font_bold);
 			background-size: 20% 1.2rem;
+			background-image: linear-gradient(
+				transparent 0,
+				transparent 0.9rem,
+				var(--accent_color) 0.9rem,
+				var(--accent_color) 1rem
+			);
 		}
 		
 	}
@@ -646,6 +656,41 @@
 			&:focus,
 			&:hover {
 				transform: translateY(-$grid-padding/2);
+			}
+		}
+	}
+}
+// Case widget
+
+.menu-reseaux-sociaux-container,
+.menu-social-menu {
+	ul {		
+		
+		li {
+			
+			a {
+				align-items: center;
+				
+				img {
+					margin-right: $grid-padding;
+					transition: transform .2s ease-in-out;
+				}
+			}
+			
+			& a:hover,
+			& a:focus {
+				padding: $grid-padding 0;
+				padding-right: .5rem;
+				background-color: transparentize(#333, .8);
+				
+				.white-text &,
+				.high-contrast & {
+					background-color: transparentize(#fff, .8);
+				}
+				
+				img {
+					transform: scale(1.1);
+				}
 			}
 		}
 	}

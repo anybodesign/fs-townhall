@@ -17,25 +17,23 @@
 		
 		<footer role="contentinfo" id="site_foot"<?php if ( $footer_white ) { echo ' class="white-text"'; } ?>>
 			<div class="row inner">
-				
-				<?php if ( has_nav_menu( 'social_menu' ) ) : ?>
-				<div class="footer-social">
-					<nav role="navigation" aria-label="<?php esc_html_e('Social Networks', 'collectif'); ?>">
-						<?php wp_nav_menu( array(
-								'theme_location'	=> 	'social_menu',
-								'menu_class'		=>	'social-menu',
-								'container'			=>	false
-								));
-						?>
-					</nav>
-				</div>
-				<?php endif; ?>
-				
-				
+					
 				<div class="footer-widgets">
-					<?php if ( is_active_sidebar( 'widgets_footer1' ) ) { ?>
+					<?php if ( is_active_sidebar( 'widgets_footer1' ) || has_nav_menu( 'social_menu' ) ) { ?>
 					<div class="widgets-area">
-						<?php dynamic_sidebar( 'widgets_footer1' ); ?>
+						<?php if ( is_active_sidebar( 'widgets_footer1' ) ) { dynamic_sidebar( 'widgets_footer1' ); } ?>
+						<?php if ( has_nav_menu( 'social_menu' ) ) : ?>
+						<div class="footer-social">
+							<nav role="navigation" aria-label="<?php esc_html_e('Social Networks', 'collectif'); ?>">
+								<?php wp_nav_menu( array(
+										'theme_location'	=> 	'social_menu',
+										'menu_class'		=>	'social-menu',
+										'container'			=>	false
+										));
+								?>
+							</nav>
+						</div>
+						<?php endif; ?>
 					</div>
 					<?php } ?>
 					
