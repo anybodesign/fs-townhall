@@ -390,6 +390,14 @@ hr {
 .acf-block--textimg {
 	.acf-block-container {
 		
+		.acf-block-textimg-text {
+			padding-right: 0;
+			padding-left: $grid-padding*4;
+		}
+		&.right .acf-block-textimg-text{
+			padding-right: $grid-padding*4;
+			padding-left: 0;
+		}
 	}
 }
 
