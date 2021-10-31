@@ -18,5 +18,8 @@
 								get_template_part('template-parts/post', 'meta');
 								endwhile;							
 							}
-							 
+							
+							if ( is_singular('event') ) {
+								get_template_part('template-parts/event', 'date');
+							}	
 						?>

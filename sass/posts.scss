@@ -118,6 +118,21 @@
 		left: -$grid-padding;
 	}
 	
+	// Banner
+	
+	.page-banner & {
+		position: relative;
+		top: auto;
+		left: auto;
+		
+		@include rwd(medium) {
+			position: absolute;
+			right: 0;
+			bottom: -$grid-padding;
+			transform: translateX(110%);
+		}
+	}
+	
 	.the-date {
 		position: relative;
 		padding: $grid-padding;
