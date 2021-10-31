@@ -11,6 +11,11 @@ We can activate a plugin to add the events feature. Then you’ll find some rela
 
 ## Changelog
 
+### 1.5 - 2021.10.31
+* CSS blocks update
+* Conditionnal post meta
+* Display event date on single
+
 ### 1.4 - 2021.09.17
 * CSS fix
 * Post block CSS update
