@@ -33,13 +33,16 @@
 	margin-bottom: $grid-padding*2;
 
 	.banner-has-bg & {
-		min-height: 20rem;
+		//min-height: 20rem;
 		background-color: var(--bg_color);
 		background-size: cover;
 		background-position: center center;
 		
+		@include rwd(small) {
+			min-height: 20rem;
+		}
 		@include rwd(medium) {
-			min-height: 29rem;
+			min-height: 30rem;
 		}
 	}
 	.error404 & {
