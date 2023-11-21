@@ -1019,8 +1019,8 @@ require 'inc/plugin-update-checker/plugin-update-checker.php';
 use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
 
 $myUpdateChecker = PucFactory::buildUpdateChecker(
-	'https://github.com/anybodesign/from-scratch',
+	'https://github.com/anybodesign/fs-townhall',
 	__FILE__,
-	'from-scratch'
+	'fs-townhall'
 );
 $myUpdateChecker->setBranch('master');
