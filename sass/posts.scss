@@ -10,6 +10,11 @@
 
 .post-figure {
 	@include img-opacity(.7);
+	
+	img {
+		aspect-ratio: 3/2;
+		object-fit: cover;
+	}
 }
 .post-header {
 	margin-bottom: $grid-padding;
