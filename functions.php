@@ -456,7 +456,8 @@ require FS_THEME_DIR . '/inc/customizer.php';
 
 // Agenda 
 
-if ( class_exists('FS_CPT_AGENDA') ) {
+if ( get_theme_mod('use_agenda') == true ) {
+	require_once( FS_THEME_DIR . '/inc/fs-cpt-agenda.php' );
 	require_once( FS_THEME_DIR . '/inc/acf/agenda-date-fields.php' );	
 }
 
@@ -848,22 +849,22 @@ if( class_exists('acf') ) {
 	
 	// Front-End ACF Functions
 	
-	add_filter('acf/settings/save_json', 'fs_acf_json_save_point');
-	function fs_acf_json_save_point( $path ) {
-	    
-	    $path = FS_THEME_DIR . '/inc/acf';
-	    
-	    return $path;
-	}
-	add_filter('acf/settings/load_json', 'fs_acf_json_load_point');
-	function fs_acf_json_load_point( $paths ) {
-	    
-	    unset($paths[0]);
-	
-	    $paths[] = FS_THEME_DIR . '/inc/acf';
-	    
-	    return $paths;
-	}
+	// add_filter('acf/settings/save_json', 'fs_acf_json_save_point');
+	// function fs_acf_json_save_point( $path ) {
+	//     
+	//     $path = FS_THEME_DIR . '/inc/acf';
+	//     
+	//     return $path;
+	// }
+	// add_filter('acf/settings/load_json', 'fs_acf_json_load_point');
+	// function fs_acf_json_load_point( $paths ) {
+	//     
+	//     unset($paths[0]);
+	// 
+	//     $paths[] = FS_THEME_DIR . '/inc/acf';
+	//     
+	//     return $paths;
+	// }
 
 	// ACF colors
 
@@ -988,26 +989,38 @@ if( class_exists('acf') ) {
 
 // WP-Rocket
 
-function fs_wp_rocket_add_purge_posts_to_author() {
-	// gets the author role object
-	$role = get_role('editor');
- 
-	// add a new capability
-	$role->add_cap('rocket_purge_cache', true);
+if ( function_exists('rocket_load_textdomain') ) {
+	function fs_wp_rocket_add_purge_posts_to_author() {
+		// gets the author role object
+		$role = get_role('editor');
+		
+		// add a new capability
+		$role->add_cap('rocket_purge_cache', true);
+	}
+	add_action('init', 'fs_wp_rocket_add_purge_posts_to_author', 12);
 }
-add_action('init', 'fs_wp_rocket_add_purge_posts_to_author', 12);
+
+// Koko 
+
+if ( class_exists('KokoAnalytics\Plugin') ) {
+	function fs_koko() {
+		$role = get_role('editor');
+		$role->add_cap('view_koko_analytics', true);
+	}
+	add_action('init', 'fs_koko', 12);
+}
 
 
 // ------------------------
 // Auto-Updater
 // ------------------------
 
-// Remove these lines and dependencies for your theme
-
 require 'inc/plugin-update-checker/plugin-update-checker.php';
-$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-	'https://github.com/anybodesign/fs-townhall',
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+
+$myUpdateChecker = PucFactory::buildUpdateChecker(
+	'https://github.com/anybodesign/from-scratch',
 	__FILE__,
-	'fs-townhall'
+	'from-scratch'
 );
 $myUpdateChecker->setBranch('master');
