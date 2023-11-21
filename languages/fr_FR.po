@@ -1,18 +1,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: FS Townhall\n"
-"POT-Creation-Date: 2021-09-13 13:07+0200\n"
-"PO-Revision-Date: 2021-09-13 13:07+0200\n"
+"POT-Creation-Date: 2023-11-21 12:37+0100\n"
+"PO-Revision-Date: 2023-11-21 12:37+0100\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.3\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.3.2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: style.css\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
 "esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
@@ -40,15 +40,15 @@ msgstr "On en discute ?"
 msgid "Add my comment!"
 msgstr "Ajouter mon commentaire !"
 
-#: footer.php:23
+#: footer.php:27
 msgid "Social Networks"
 msgstr "Réseaux sociaux"
 
-#: footer.php:65
+#: footer.php:63
 msgid "Powered by WordPress!"
 msgstr "Propulsé par WordPress !"
 
-#: footer.php:68 functions.php:470
+#: footer.php:66 functions.php:471
 msgid "Footer Menu"
 msgstr "Menu pied de page"
 
@@ -92,105 +92,105 @@ msgstr "Grande"
 msgid "L"
 msgstr "L"
 
-#: functions.php:468 template-parts/header-toolbar.php:8
+#: functions.php:469 template-parts/header-toolbar.php:8
 msgid "Toolbar Menu"
 msgstr "Menu barre d'outils"
 
-#: functions.php:469 template-parts/header-nav.php:6
+#: functions.php:470 template-parts/header-nav.php:6
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: functions.php:471
+#: functions.php:472
 msgid "Social Menu"
 msgstr "Menu réseaux sociaux"
 
-#: functions.php:570
+#: functions.php:571
 msgid "Read More"
 msgstr "Lire la suite"
 
-#: functions.php:616
+#: functions.php:617
 msgid "Thumbnail x2"
 msgstr "Miniature (x2)"
 
-#: functions.php:617
+#: functions.php:618
 msgid "Medium x2"
 msgstr "Moyenne (x2)"
 
-#: functions.php:618
+#: functions.php:619
 msgid "Large x2"
 msgstr "Grande x2"
 
-#: functions.php:619
+#: functions.php:620
 msgid "Screen Medium"
 msgstr "Écran moyen"
 
-#: functions.php:620
+#: functions.php:621
 msgid "Screen Full"
 msgstr "Plein écran"
 
-#: functions.php:621
+#: functions.php:622
 msgid "Video Medium"
 msgstr "Vidéo taille moyenne"
 
-#: functions.php:622
+#: functions.php:623
 msgid "Video Full"
 msgstr "Vidéo plein écran"
 
-#: functions.php:665
+#: functions.php:666
 msgid "Blog Widgets"
 msgstr "Widget du blog"
 
-#: functions.php:674
+#: functions.php:675
 msgid "Footer Widgets #1"
 msgstr "Widgets pied de page #1"
 
-#: functions.php:683
+#: functions.php:684
 msgid "Footer Widgets #2"
 msgstr "Widgets pied de page #2"
 
-#: functions.php:692
+#: functions.php:693
 msgid "Footer Widgets #3"
 msgstr "Widgets pied de page #3"
 
-#: functions.php:718
+#: functions.php:719
 msgid "Text intro"
 msgstr "Texte d’intro"
 
-#: functions.php:724
+#: functions.php:725
 msgid "Text mentions"
 msgstr "Mentions"
 
-#: functions.php:730
+#: functions.php:731
 msgid "Action button"
 msgstr "Bouton d’action"
 
-#: functions.php:750
+#: functions.php:751
 msgid "Search for:"
 msgstr "Rechercher :"
 
-#: functions.php:752 template-parts/header-searchbox.php:5
+#: functions.php:753 template-parts/header-searchbox.php:5
 #: template-parts/header-searchbox.php:13 template-parts/header-toolbar.php:23
 msgid "Search"
 msgstr "Recherche"
 
-#: functions.php:784
+#: functions.php:785
 #, php-format
 msgid "%1$s at %2$s"
 msgstr "%1$s à %2$s"
 
-#: functions.php:790
+#: functions.php:791
 msgid "Your comment is awaiting moderation."
 msgstr "Votre commentaire est en attente de modération."
 
-#: functions.php:799
+#: functions.php:800
 msgid "Reply"
 msgstr "Répondre"
 
-#: functions.php:805
+#: functions.php:806
 msgid "Edit"
 msgstr "Modifier"
 
-#: inc/acf/agenda-date-fields.php:9
+#: inc/acf/agenda-date-fields.php:9 inc/fs-cpt-agenda.php:133
 msgid "Event date"
 msgstr "Date de l’événement"
 
@@ -361,58 +361,62 @@ msgid "Display WordPress Link"
 msgstr "Afficher le lien WordPress"
 
 #: inc/customizer.php:571
+msgid "Enable Events Custom post type"
+msgstr "Activer le type de contenu personnalisé événements (Agenda)"
+
+#: inc/customizer.php:590
 msgid "Display a Back to top button"
 msgstr "Afficher un bouton Haut de page"
 
-#: inc/customizer.php:590
+#: inc/customizer.php:609
 msgid "Make the header sticky"
 msgstr "Rendre l'en-tête collant"
 
-#: inc/customizer.php:609
+#: inc/customizer.php:628
 msgid "Load new posts on click"
 msgstr "Charger les nouveaux articles au clic"
 
-#: inc/customizer.php:628
+#: inc/customizer.php:647
 msgid "Use Scrollout to animate blocks on scroll"
 msgstr "Utilisez Scrollout pour animer les blocs au scroll"
 
-#: inc/customizer.php:647
+#: inc/customizer.php:666
 msgid "Use Fancybox to enlarge pictures"
 msgstr "Utilisez Fancybox pour agrandir les images"
 
-#: inc/customizer.php:666
+#: inc/customizer.php:685
 msgid "Blog introduction text"
 msgstr "Texte d’introduction du blog"
 
-#: inc/customizer.php:684
+#: inc/customizer.php:703
 msgid "Show the sidebar on the blog page"
 msgstr "Afficher la barre latérale sur la page du blog"
 
-#: inc/customizer.php:701
+#: inc/customizer.php:720
 msgid "Show the sidebar on single posts"
 msgstr "Afficher la barre latérale sur les articles"
 
-#: inc/customizer.php:720
+#: inc/customizer.php:739
 msgid "Show the category dropdown on the blog page"
 msgstr "Afficher le sélecteur de catégories sur les pages du blog"
 
-#: inc/customizer.php:739
+#: inc/customizer.php:758
 msgid "Excerpt lenght (number of words)"
 msgstr "Longueur de l’extrait (nombre de mots)"
 
-#: inc/customizer.php:758
+#: inc/customizer.php:777
 msgid "Show the publication date in post meta"
 msgstr "Afficher la date de publication dans les post meta"
 
-#: inc/customizer.php:774
+#: inc/customizer.php:793
 msgid "Show the author in post meta"
 msgstr "Afficher l’auteur dans les post meta"
 
-#: inc/customizer.php:790
+#: inc/customizer.php:809
 msgid "Show the category in post meta"
 msgstr "Afficher la catégorie dans les post meta"
 
-#: inc/customizer.php:809
+#: inc/customizer.php:828
 msgid ""
 "Add basic social networks sharing buttons on single posts (Facebook, "
 "Twitter, LinkedIn, e-mail)"
@@ -420,128 +424,320 @@ msgstr ""
 "Ajouter des boutons de partage de base pour les réseaux sociaux sur les "
 "articles (Facebook, Twitter, LinkedIn, e-mail)"
 
-#: inc/customizer.php:833
+#: inc/customizer.php:852
 msgid "Layout version"
 msgstr "Version de mise en page"
 
-#: inc/customizer.php:836
+#: inc/customizer.php:855
 msgid "Version 1"
 msgstr "Version 1"
 
-#: inc/customizer.php:837
+#: inc/customizer.php:856
 msgid "Version 2"
 msgstr "Version 2"
 
-#: inc/customizer.php:857
+#: inc/customizer.php:876
 msgid "Choose your fonts"
 msgstr "Choisissez vos polices"
 
-#: inc/customizer.php:860
+#: inc/customizer.php:879
 msgid "Andes Neue & Atkinson"
 msgstr "Andes Neue et Atkinson"
 
-#: inc/customizer.php:861
+#: inc/customizer.php:880
 msgid "Cooper Hewit & Atkinson"
 msgstr "Cooper Hewit et Atkinson"
 
-#: inc/customizer.php:862
+#: inc/customizer.php:881
 msgid "Barlow"
 msgstr "Barlow"
 
-#: inc/customizer.php:863
+#: inc/customizer.php:882
 msgid "Bebas & Bitter"
 msgstr "Bebas & Bitter"
 
-#: inc/customizer.php:864
+#: inc/customizer.php:883
 msgid "Luciole"
 msgstr "Luciole"
 
-#: inc/customizer.php:883
+#: inc/customizer.php:902
 msgid "Events introduction text"
 msgstr "Texte d'introduction de l’agenda"
 
-#: inc/customizer.php:901
+#: inc/customizer.php:920
 msgid "Display the search filters."
 msgstr "Affichez les filtres de recherche."
 
-#: inc/customizer.php:923
+#: inc/customizer.php:942
 msgid "Show background images in the banner"
 msgstr "Afficher des images de fond dans la bannière"
 
-#: inc/customizer.php:942
+#: inc/customizer.php:961
 msgid "Default banner"
 msgstr "Bannière par défaut"
 
-#: inc/customizer.php:943
+#: inc/customizer.php:962
 msgid "Choose a default picture for the page banner. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une image par défaut pour la bannière de page. (2048 x 625 pixels "
 "max.)"
 
-#: inc/customizer.php:963
+#: inc/customizer.php:982
 msgid "Blog"
 msgstr "Blog"
 
-#: inc/customizer.php:964
+#: inc/customizer.php:983
 msgid "Choose a picture for the blog banner. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une photo pour la bannière du blog. (2048 x 625 pixels max.)"
 
-#: inc/customizer.php:985
+#: inc/customizer.php:1004 inc/fs-cpt-agenda.php:48 inc/fs-cpt-agenda.php:81
 msgid "Events"
 msgstr "Agenda"
 
-#: inc/customizer.php:986
+#: inc/customizer.php:1005
 msgid "Choose a picture for the events banner. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une image pour la bannière de l’agenda. (2048 x 625 pixels max.)"
 
-#: inc/customizer.php:1007
+#: inc/customizer.php:1026
 msgid "404 error"
 msgstr "Erreur 404"
 
-#: inc/customizer.php:1008
+#: inc/customizer.php:1027
 msgid "Choose a picture for the 404 error page. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une image pour la page d’erreur 404. (2048 x 625 pixels max.)"
 
-#: inc/plugin-update-checker/Puc/v4p11/Plugin/Ui.php:54
+#: inc/fs-cpt-agenda.php:46
+msgctxt "Post Type General Name"
+msgid "Events"
+msgstr "Agenda"
+
+#: inc/fs-cpt-agenda.php:47
+msgctxt "Post Type Singular Name"
+msgid "Event"
+msgstr "Agenda"
+
+#: inc/fs-cpt-agenda.php:49
+msgid "Event"
+msgstr "Agenda"
+
+#: inc/fs-cpt-agenda.php:50
+msgid "Item Archives"
+msgstr "Archives de l'élément"
+
+#: inc/fs-cpt-agenda.php:51
+msgid "Item Attributes"
+msgstr "Attributs de l'élément"
+
+#: inc/fs-cpt-agenda.php:52 inc/fs-cpt-agenda.php:189 inc/fs-cpt-agenda.php:232
+msgid "Parent Item:"
+msgstr "Élément parent :"
+
+#: inc/fs-cpt-agenda.php:53 inc/fs-cpt-agenda.php:187 inc/fs-cpt-agenda.php:230
+msgid "All Items"
+msgstr "Tous les éléments"
+
+#: inc/fs-cpt-agenda.php:54 inc/fs-cpt-agenda.php:191 inc/fs-cpt-agenda.php:234
+msgid "Add New Item"
+msgstr "Ajoute un nouvel élément"
+
+#: inc/fs-cpt-agenda.php:55
+msgid "Add New"
+msgstr "Ajouter"
+
+#: inc/fs-cpt-agenda.php:56
+msgid "New Item"
+msgstr "Nouvel élément"
+
+#: inc/fs-cpt-agenda.php:57 inc/fs-cpt-agenda.php:192 inc/fs-cpt-agenda.php:235
+msgid "Edit Item"
+msgstr "Modifier l’élément"
+
+#: inc/fs-cpt-agenda.php:58 inc/fs-cpt-agenda.php:193 inc/fs-cpt-agenda.php:236
+msgid "Update Item"
+msgstr "Mettre à jour"
+
+#: inc/fs-cpt-agenda.php:59 inc/fs-cpt-agenda.php:194 inc/fs-cpt-agenda.php:237
+msgid "View Item"
+msgstr "Voir l’élément"
+
+#: inc/fs-cpt-agenda.php:60
+msgid "View Items"
+msgstr "Voir les éléments"
+
+#: inc/fs-cpt-agenda.php:61
+msgid "Search Item"
+msgstr "Rechercher un article"
+
+#: inc/fs-cpt-agenda.php:62
+msgid "Not found"
+msgstr "Aucun résultat"
+
+#: inc/fs-cpt-agenda.php:63
+msgid "Not found in Trash"
+msgstr "Introuvable dans la corbeille"
+
+#: inc/fs-cpt-agenda.php:64
+msgid "Featured Image"
+msgstr "Image mise en avant"
+
+#: inc/fs-cpt-agenda.php:65
+msgid "Set featured image"
+msgstr "Définir l’image mise en avant"
+
+#: inc/fs-cpt-agenda.php:66
+msgid "Remove featured image"
+msgstr "Supprimer l'image mise en avant"
+
+#: inc/fs-cpt-agenda.php:67
+msgid "Use as featured image"
+msgstr "Utiliser comme image mise en avant"
+
+#: inc/fs-cpt-agenda.php:68
+msgid "Insert into item"
+msgstr "Insérer dans l'élément"
+
+#: inc/fs-cpt-agenda.php:69
+msgid "Uploaded to this item"
+msgstr "Téléversé dans l’élément"
+
+#: inc/fs-cpt-agenda.php:70 inc/fs-cpt-agenda.php:202 inc/fs-cpt-agenda.php:245
+msgid "Items list"
+msgstr "Liste des éléments"
+
+#: inc/fs-cpt-agenda.php:71 inc/fs-cpt-agenda.php:203 inc/fs-cpt-agenda.php:246
+msgid "Items list navigation"
+msgstr "Navigation de la liste des éléments"
+
+#: inc/fs-cpt-agenda.php:72
+msgid "Filter items list"
+msgstr "Filtrer la liste des éléments"
+
+#: inc/fs-cpt-agenda.php:75
+msgid "event"
+msgstr "evenement"
+
+#: inc/fs-cpt-agenda.php:94
+msgid "events"
+msgstr "evenements"
+
+#: inc/fs-cpt-agenda.php:116
+msgid "Choose a title for this event"
+msgstr "Choisissez un titre pour cet événement"
+
+#: inc/fs-cpt-agenda.php:184
+msgctxt "Taxonomy General Name"
+msgid "Events types"
+msgstr "Type d’événement"
+
+#: inc/fs-cpt-agenda.php:185
+msgctxt "Taxonomy Singular Name"
+msgid "Event type"
+msgstr "Type d’événement"
+
+#: inc/fs-cpt-agenda.php:186 template-parts/post-filters.php:48
+#: template-parts/post-filters.php:53
+msgid "Event type"
+msgstr "Type d’événement"
+
+#: inc/fs-cpt-agenda.php:188 inc/fs-cpt-agenda.php:231
+msgid "Parent Item"
+msgstr "Élément parent"
+
+#: inc/fs-cpt-agenda.php:190 inc/fs-cpt-agenda.php:233
+msgid "New Item Name"
+msgstr "Nouveau nom d’élément"
+
+#: inc/fs-cpt-agenda.php:195 inc/fs-cpt-agenda.php:238
+msgid "Separate items with commas"
+msgstr "Séparer les éléments par des virgules"
+
+#: inc/fs-cpt-agenda.php:196 inc/fs-cpt-agenda.php:239
+msgid "Add or remove items"
+msgstr "Ajouter ou supprimer des éléments"
+
+#: inc/fs-cpt-agenda.php:197 inc/fs-cpt-agenda.php:240
+msgid "Choose from the most used"
+msgstr "Choisir parmi les plus utilisés"
+
+#: inc/fs-cpt-agenda.php:198 inc/fs-cpt-agenda.php:241
+msgid "Popular Items"
+msgstr "Éléments populaires"
+
+#: inc/fs-cpt-agenda.php:199 inc/fs-cpt-agenda.php:242
+msgid "Search Items"
+msgstr "Rechercher des éléments"
+
+#: inc/fs-cpt-agenda.php:200 inc/fs-cpt-agenda.php:243
+msgid "Not Found"
+msgstr "Aucun résultat"
+
+#: inc/fs-cpt-agenda.php:201 inc/fs-cpt-agenda.php:244
+msgid "No items"
+msgstr "Aucun élément"
+
+#: inc/fs-cpt-agenda.php:206
+msgid "event-type"
+msgstr "type-evenement"
+
+#: inc/fs-cpt-agenda.php:227
+msgctxt "Taxonomy General Name"
+msgid "Periods"
+msgstr "Période"
+
+#: inc/fs-cpt-agenda.php:228
+msgctxt "Taxonomy Singular Name"
+msgid "Period"
+msgstr "Période"
+
+#: inc/fs-cpt-agenda.php:229 template-parts/post-filters.php:65
+#: template-parts/post-filters.php:70
+msgid "Period"
+msgstr "Période"
+
+#: inc/fs-cpt-agenda.php:249
+msgid "event-period"
+msgstr "periode-evenement"
+
+#: inc/plugin-update-checker/Puc/v5p3/Plugin/Ui.php:56
 msgid "View details"
 msgstr "Voir les détails"
 
-#: inc/plugin-update-checker/Puc/v4p11/Plugin/Ui.php:77
+#: inc/plugin-update-checker/Puc/v5p3/Plugin/Ui.php:79
 #, php-format
 msgid "More information about %s"
 msgstr "Plus d'informations sur %s"
 
-#: inc/plugin-update-checker/Puc/v4p11/Plugin/Ui.php:128
+#: inc/plugin-update-checker/Puc/v5p3/Plugin/Ui.php:130
 msgid "Check for updates"
 msgstr "Vérifier les mises à jour"
 
-#: inc/plugin-update-checker/Puc/v4p11/Plugin/Ui.php:214
+#: inc/plugin-update-checker/Puc/v5p3/Plugin/Ui.php:217
 #, php-format
 msgctxt "the plugin title"
 msgid "The %s plugin is up to date."
 msgstr "L’extension %s est à jour."
 
-#: inc/plugin-update-checker/Puc/v4p11/Plugin/Ui.php:216
+#: inc/plugin-update-checker/Puc/v5p3/Plugin/Ui.php:219
 #, php-format
 msgctxt "the plugin title"
 msgid "A new version of the %s plugin is available."
 msgstr "Une nouvelle version de l'extension %s est disponible."
 
-#: inc/plugin-update-checker/Puc/v4p11/Plugin/Ui.php:218
+#: inc/plugin-update-checker/Puc/v5p3/Plugin/Ui.php:221
 #, php-format
 msgctxt "the plugin title"
 msgid "Could not determine if updates are available for %s."
 msgstr "Impossible de déterminer si des mises à jour sont disponibles pour %s."
 
-#: inc/plugin-update-checker/Puc/v4p11/Plugin/Ui.php:224
+#: inc/plugin-update-checker/Puc/v5p3/Plugin/Ui.php:227
 #, php-format
 msgid "Unknown update checker status \"%s\""
 msgstr "Statut inconnu du vérificateur de mise à jour \"%s\""
 
-#: inc/plugin-update-checker/Puc/v4p11/Vcs/PluginUpdateChecker.php:98
+#: inc/plugin-update-checker/Puc/v5p3/Vcs/PluginUpdateChecker.php:113
 msgid "There is no changelog available."
 msgstr "Il n’y a aucun historique des mises à jour disponible."
 
@@ -549,11 +745,11 @@ msgstr "Il n’y a aucun historique des mises à jour disponible."
 msgid "Unfold Sub-Menu"
 msgstr "Déplier le sous-menu"
 
-#: template-parts/event-meta.php:13 template-parts/post-meta.php:20
+#: template-parts/event-meta.php:13 template-parts/post-meta.php:22
 msgid "Posted "
 msgstr "Publié "
 
-#: template-parts/event-meta.php:14 template-parts/post-meta.php:22
+#: template-parts/event-meta.php:14 template-parts/post-meta.php:24
 msgid "on&nbsp;"
 msgstr "le&nbsp;"
 
@@ -653,23 +849,15 @@ msgstr "Catégories"
 msgid "All categories"
 msgstr "Toutes les catégories"
 
-#: template-parts/post-filters.php:48 template-parts/post-filters.php:53
-msgid "Event type"
-msgstr "Type d’événement"
-
-#: template-parts/post-filters.php:65 template-parts/post-filters.php:70
-msgid "Period"
-msgstr "Période"
-
-#: template-parts/post-meta.php:26
+#: template-parts/post-meta.php:28
 msgid "by&nbsp;"
 msgstr "par&nbsp;"
 
-#: template-parts/post-meta.php:29
+#: template-parts/post-meta.php:31
 msgid "in&nbsp;"
 msgstr "dans&nbsp;"
 
-#: template-parts/post-meta.php:37
+#: template-parts/post-meta.php:39
 #, php-format
 msgid "%s comment"
 msgid_plural "%s comments"
@@ -773,75 +961,6 @@ msgstr "Maintenance"
 #~ msgid "Projects"
 #~ msgstr "Projets"
 
-#~ msgid "Item Archives"
-#~ msgstr "Archives de l'élément"
-
-#~ msgid "Item Attributes"
-#~ msgstr "Attributs de l'élément"
-
-#~ msgid "Parent Item:"
-#~ msgstr "Élément parent :"
-
-#~ msgid "All Items"
-#~ msgstr "Tous les éléments"
-
-#~ msgid "Add New Item"
-#~ msgstr "Ajoute un nouvel élément"
-
-#~ msgid "Add New"
-#~ msgstr "Ajouter"
-
-#~ msgid "New Item"
-#~ msgstr "Nouvel élément"
-
-#~ msgid "Edit Item"
-#~ msgstr "Modifier l’élément"
-
-#~ msgid "Update Item"
-#~ msgstr "Mettre à jour"
-
-#~ msgid "View Item"
-#~ msgstr "Voir l’élément"
-
-#~ msgid "View Items"
-#~ msgstr "Voir les éléments"
-
-#~ msgid "Search Item"
-#~ msgstr "Rechercher un article"
-
-#~ msgid "Not found"
-#~ msgstr "Aucun résultat"
-
-#~ msgid "Not found in Trash"
-#~ msgstr "Introuvable dans la corbeille"
-
-#~ msgid "Featured Image"
-#~ msgstr "Image mise en avant"
-
-#~ msgid "Set featured image"
-#~ msgstr "Définir l’image mise en avant"
-
-#~ msgid "Remove featured image"
-#~ msgstr "Supprimer l'image mise en avant"
-
-#~ msgid "Use as featured image"
-#~ msgstr "Utiliser comme image mise en avant"
-
-#~ msgid "Insert into item"
-#~ msgstr "Insérer dans l'élément"
-
-#~ msgid "Uploaded to this item"
-#~ msgstr "Téléversé dans l’élément"
-
-#~ msgid "Items list"
-#~ msgstr "Liste des éléments"
-
-#~ msgid "Items list navigation"
-#~ msgstr "Navigation de la liste des éléments"
-
-#~ msgid "Filter items list"
-#~ msgstr "Filtrer la liste des éléments"
-
 #~ msgid "project"
 #~ msgstr "projet"
 
@@ -851,42 +970,12 @@ msgstr "Maintenance"
 #~ msgid "Post Type Description"
 #~ msgstr "Description du Post Type"
 
-#~ msgid "Choose a title for this project"
-#~ msgstr "Choisissez un titre pour ce projet"
-
 #~ msgctxt "Taxonomy General Name"
 #~ msgid "Project types"
 #~ msgstr "Types de projets"
 
 #~ msgid "Project types"
 #~ msgstr "Types de projets"
-
-#~ msgid "Parent Item"
-#~ msgstr "Élément parent"
-
-#~ msgid "New Item Name"
-#~ msgstr "Nouveau nom d’élément"
-
-#~ msgid "Separate items with commas"
-#~ msgstr "Séparer les éléments par des virgules"
-
-#~ msgid "Add or remove items"
-#~ msgstr "Ajouter ou supprimer des éléments"
-
-#~ msgid "Choose from the most used"
-#~ msgstr "Choisir parmi les plus utilisés"
-
-#~ msgid "Popular Items"
-#~ msgstr "Éléments populaires"
-
-#~ msgid "Search Items"
-#~ msgstr "Rechercher des éléments"
-
-#~ msgid "Not Found"
-#~ msgstr "Aucun résultat"
-
-#~ msgid "No items"
-#~ msgstr "Aucun élément"
 
 #~ msgid "project-type"
 #~ msgstr "type-projet"
