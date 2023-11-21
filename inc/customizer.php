@@ -553,7 +553,26 @@ function fs_customize_register($fs_customize) {
 
 	// Theme Options
 	// -
-	// + + + + + + + + + + 
+	// + + + + + + + + + +
+	
+		// Agenda
+		
+		$fs_customize->add_setting(
+			'use_agenda', 
+			array(
+				'default'			=> false,
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'use_agenda', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('Enable Events Custom post type', 'fs-townhall'),
+				'section'		=> 'fs_options_section',
+				'settings'		=> 'use_agenda',
+			)
+		); 
 		
 		// Back to top
 	
