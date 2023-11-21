@@ -11,6 +11,12 @@ We can activate a plugin to add the events feature. Then you’ll find some rela
 
 ## Changelog
 
+
+### 1.6 - 2023.11.21
+* Agenda CPT inside Theme with Customizer Option
+* Picture fallback
+* PUC update
+
 ### 1.5 - 2021.10.31
 * CSS blocks update
 * Conditionnal post meta
